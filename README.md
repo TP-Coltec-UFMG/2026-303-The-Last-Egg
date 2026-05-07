@@ -21,5 +21,6 @@ https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR
 ## Pré-requisitos
 - Godot Engine (4.5 Stable)
 
-## Logo
-<img src="imgs/Logo_TheLastEgg.png" alt="Logo">
+## Tela Inicial e Menu Principal
+### Tela Inicial
+<img src="imgs/Tela Inicial_TheLastEgg.png" alt="Logo">
