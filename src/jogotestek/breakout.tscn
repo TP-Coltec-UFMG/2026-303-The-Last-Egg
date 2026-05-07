@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=3 uid="uid://b8d6wk2scrw0u"]
+
+[ext_resource type="Script" uid="uid://b6k5sx413kdf6" path="res://jogotestek/bolinha.gd" id="1_hwq1p"]
+[ext_resource type="Texture2D" uid="uid://b8k4bgcgr1j1a" path="res://jogotestek/assets/background.jpg" id="1_ujkww"]
+[ext_resource type="Script" uid="uid://dkpkcvjdq12he" path="res://jogotestek/barra.gd" id="2_hwq1p"]
+[ext_resource type="Texture2D" uid="uid://b6jpjcp2cd17y" path="res://jogotestek/assets/bolinha_sprite.png" id="3_trutr"]
+[ext_resource type="Texture2D" uid="uid://dtml11ai2lh8p" path="res://jogotestek/assets/barra_sprite.jpg" id="3_ujkww"]
+[ext_resource type="Script" uid="uid://b3wufyv6rta84" path="res://jogotestek/gerador_de_blocos.gd" id="6_fuc1x"]
+[ext_resource type="Script" uid="uid://dhnnds4n882xk" path="res://jogotestek/game_manager.gd" id="8_e5bpj"]
+[ext_resource type="PackedScene" uid="uid://6wjautn2vldw" path="res://jogotestek/bloco.tscn" id="8_omnq1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_trutr"]
+radius = 26.086967
+height = 66.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fuc1x"]
+size = Vector2(257, 23)
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(1.0885487, 1.0540421)
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(523.633, 306.43936)
+scale = Vector2(0.56471014, 0.59607023)
+texture = ExtResource("1_ujkww")
+
+[node name="Bolinha" type="Area2D" parent="." node_paths=PackedStringArray("gm")]
+position = Vector2(490.56146, 436.4152)
+scale = Vector2(1.840003, 1.36)
+script = ExtResource("1_hwq1p")
+gm = NodePath("../GameManager")
+metadata/_edit_group_ = true
+
+[node name="Bolinha_Sprite" type="Sprite2D" parent="Bolinha"]
+position = Vector2(-0.30706275, 0.7500093)
+scale = Vector2(0.25257438, 0.26652887)
+texture = ExtResource("3_trutr")
+
+[node name="Bolinha_Colission" type="CollisionShape2D" parent="Bolinha"]
+position = Vector2(1.0869473, 0)
+shape = SubResource("CapsuleShape2D_trutr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Bolinha"]
+
+[node name="Barra" type="Area2D" parent="."]
+position = Vector2(485.04944, 573.98083)
+scale = Vector2(0.8038045, 1.0111524)
+script = ExtResource("2_hwq1p")
+metadata/_edit_group_ = true
+
+[node name="Barra_Sprite" type="Sprite2D" parent="Barra"]
+position = Vector2(1.0000001, -2.3841858e-07)
+scale = Vector2(0.3388594, 0.048228327)
+texture = ExtResource("3_ujkww")
+
+[node name="Barra_Colission" type="CollisionShape2D" parent="Barra"]
+position = Vector2(2.5, 1.5)
+shape = SubResource("RectangleShape2D_fuc1x")
+
+[node name="GeradordeBlocos" type="Node2D" parent="." node_paths=PackedStringArray("gm")]
+script = ExtResource("6_fuc1x")
+cena_bloco = ExtResource("8_omnq1")
+gm = NodePath("../GameManager")
+
+[node name="CanvasLayer" type="Node2D" parent="."]
+process_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 321.52905
+offset_top = 207.77159
+offset_right = 636.52905
+offset_bottom = 262.7716
+scale = Vector2(1.3254834, 3.472754)
+theme_override_font_sizes/font_size = 40
+text = "VOCÊ PERDEU :(("
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 410.63852
+offset_top = 392.77368
+offset_right = 594.63855
+offset_bottom = 428.77368
+theme_override_font_sizes/font_size = 20
+text = "TENTAR DENOVO?"
+
+[node name="GameManager" type="Node2D" parent="." node_paths=PackedStringArray("texto", "reiniciar")]
+script = ExtResource("8_e5bpj")
+texto = NodePath("../CanvasLayer/Label")
+reiniciar = NodePath("../CanvasLayer/Button")
+
+[connection signal="area_entered" from="Bolinha" to="Bolinha" method="_on_area_entered"]
+[connection signal="area_entered" from="Barra" to="Bolinha" method="_on_barra_area_entered"]

@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://c3lg6kd2sipjk"]
+
+[ext_resource type="Texture2D" uid="uid://bmfe1ja14dsa5" path="res://background/background_teste.jpg" id="1_bj1uy"]
+[ext_resource type="Script" uid="uid://dq8pw2t8puw8k" path="res://menu_principal.gd" id="1_ul6ys"]
+[ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://Fonte/GrapeSoda.ttf" id="2_gmcsc"]
+[ext_resource type="AudioStream" uid="uid://cpt48lk3yqaqx" path="res://SFX/som_do_botão.mp3" id="4_ns3he"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmcsc"]
+texture = ExtResource("1_bj1uy")
+modulate_color = Color(0.38909814, 0.39710915, 0.39710915, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmcsc"]
+bg_color = Color(0.7308767, 0.5946151, 0.56666404, 1)
+border_color = Color(0.59769416, 0.7877284, 0.78929776, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="Menu" type="Node2D" unique_id=2071003191]
+script = ExtResource("1_ul6ys")
+
+[node name="Button_manager" type="Control" parent="." unique_id=357556370]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="Button_manager" unique_id=1498093395]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 1151.0
+offset_bottom = 651.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gmcsc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button_manager" unique_id=784520742]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 333.0
+offset_top = 300.0
+offset_right = 633.0
+offset_bottom = 494.6667
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+theme_override_constants/separation = 10
+
+[node name="Começar" type="Button" parent="Button_manager/VBoxContainer" unique_id=827593278]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99788743, 0.84390074, 0.67702055, 1)
+theme_override_fonts/font = ExtResource("2_gmcsc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gmcsc")
+text = "Começar 
+"
+
+[node name="Opções" type="Button" parent="Button_manager/VBoxContainer" unique_id=2059608986]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99788743, 0.84390074, 0.67702055, 1)
+theme_override_fonts/font = ExtResource("2_gmcsc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gmcsc")
+text = "Opções
+"
+
+[node name="Sair" type="Button" parent="Button_manager/VBoxContainer" unique_id=1508381153]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99788743, 0.84390074, 0.67702055, 1)
+theme_override_fonts/font = ExtResource("2_gmcsc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gmcsc")
+text = "Sair
+
+"
+autowrap_trim_flags = 0
+
+[node name="Titulo" type="Label" parent="Button_manager" unique_id=363775244]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 115.0
+offset_right = 737.0
+offset_bottom = 229.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 11
+theme_override_fonts/font = ExtResource("2_gmcsc")
+theme_override_font_sizes/font_size = 74
+text = "The last egg"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SomDoBotão" type="AudioStreamPlayer" parent="." unique_id=1175488830]
+stream = ExtResource("4_ns3he")
+bus = &"Efeitos"
+
+[connection signal="pressed" from="Button_manager/VBoxContainer/Começar" to="." method="_on_começar_pressed"]
+[connection signal="pressed" from="Button_manager/VBoxContainer/Opções" to="." method="_on_opções_pressed"]
+[connection signal="pressed" from="Button_manager/VBoxContainer/Sair" to="." method="_on_sair_pressed"]

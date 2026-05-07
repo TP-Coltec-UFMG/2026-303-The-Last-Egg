@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://6wjautn2vldw"]
+
+[ext_resource type="Texture2D" uid="uid://c1ym6xjregvee" path="res://assets/parede.png" id="1_edy7l"]
+[ext_resource type="Script" uid="uid://bggysirftr3jm" path="res://bloco.gd" id="1_o26kk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trutr"]
+size = Vector2(139.2941, 120.09523)
+
+[node name="Bloco" type="Area2D"]
+scale = Vector2(1.2865088, 0.5446108)
+script = ExtResource("1_o26kk")
+metadata/_edit_group_ = true
+
+[node name="Bloco_Sprite" type="Sprite2D" parent="."]
+position = Vector2(0.69597465, -1.552801)
+rotation = 1.5707964
+scale = Vector2(0.2975448, 0.21319366)
+texture = ExtResource("1_edy7l")
+
+[node name="Bloco_Colission" type="CollisionShape2D" parent="."]
+position = Vector2(3.7467444, 4.2184625)
+scale = Vector2(1.0000001, 0.99999994)
+shape = SubResource("RectangleShape2D_trutr")

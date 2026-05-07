@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://c6ohxjq4qecfw"]
+
+[ext_resource type="Script" uid="uid://dyqc4jj8flu0u" path="res://opções.gd" id="1_85cj8"]
+[ext_resource type="AudioStream" uid="uid://uub2qu1w6mxt" path="res://música/Música.mp3" id="2_dhd35"]
+[ext_resource type="AudioStream" uid="uid://cpt48lk3yqaqx" path="res://SFX/som_do_botão.mp3" id="3_dhd35"]
+
+[node name="opções" type="Control" unique_id=702954808]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_85cj8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1612624854]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=536982679]
+layout_mode = 2
+
+[node name="Volume_Geral_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1993201847]
+layout_mode = 2
+text = "Volume Geral:"
+
+[node name="Volume_Geral_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=12284583]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="Volume_Musica_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1995309057]
+layout_mode = 2
+text = "Volume da Música:"
+
+[node name="Volume_Musica_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=552008545]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="Volume_Efeitos_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1334386206]
+layout_mode = 2
+text = "Volume de Efeitos:"
+
+[node name="Volume_Efeitos_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=630910048]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="Botão_Música_Teste" type="Button" parent="MarginContainer/VBoxContainer" unique_id=76268772]
+layout_mode = 2
+text = "botão da música
+"
+
+[node name="Musica" type="AudioStreamPlayer" parent="MarginContainer/VBoxContainer/Botão_Música_Teste" unique_id=473615260]
+stream = ExtResource("2_dhd35")
+bus = &"Musica"
+
+[node name="Botão_Efeitos_Teste" type="Button" parent="MarginContainer/VBoxContainer" unique_id=309239454]
+layout_mode = 2
+text = "botão dos efeitos
+"
+
+[node name="SomDoBotão" type="AudioStreamPlayer" parent="MarginContainer/VBoxContainer/Botão_Efeitos_Teste" unique_id=1507290488]
+stream = ExtResource("3_dhd35")
+bus = &"Efeitos"
+
+[node name="Voltar_Teste" type="Button" parent="." unique_id=1800839342]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 566.0
+offset_right = 179.0
+offset_bottom = 620.0
+text = "voltar"
+
+[node name="Voltar_Teste2" type="Button" parent="." unique_id=246848775]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 566.0
+offset_right = 376.0
+offset_bottom = 620.0
+text = "voltar para intro
+"
+
+[connection signal="changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_geral_barra_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_geral_barra_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_value_changed"]
+[connection signal="changed" from="MarginContainer/VBoxContainer/Volume_Musica_Barra" to="." method="_on_volume_musica_barra_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Musica_Barra" to="." method="_on_volume_musica_barra_value_changed"]
+[connection signal="changed" from="MarginContainer/VBoxContainer/Volume_Efeitos_Barra" to="." method="_on_volume_efeitos_barra_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Efeitos_Barra" to="." method="_on_volume_efeitos_barra_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Botão_Música_Teste" to="." method="_on_botão_música_teste_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Botão_Efeitos_Teste" to="." method="_on_botão_efeitos_teste_pressed"]
+[connection signal="pressed" from="Voltar_Teste" to="." method="_on_voltar_teste_pressed"]
+[connection signal="pressed" from="Voltar_Teste2" to="." method="_on_voltar_teste_2_pressed"]
