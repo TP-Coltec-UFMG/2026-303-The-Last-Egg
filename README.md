@@ -23,4 +23,6 @@ https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR
 
 ## Tela Inicial e Menu Principal
 ### Tela Inicial
-<img src="imgs/Tela Inicial_TheLastEgg.png" alt="Logo">
+<img src="imgs/TelaInicial_TheLastEgg.png" alt="Logo">
+### Menu Principal
+<img src="imgs/MenuPrincipal_TheLastEgg.png" alt="Logo">
