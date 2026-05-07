@@ -22,7 +22,7 @@ https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR
 - Godot Engine (4.5 Stable)
 
 ## Tela Inicial e Menu Principal
-### Tela Inicial
+Tela Inicial
 <img src="imgs/TelaInicial_TheLastEgg.png" alt="Logo">
-### Menu Principal
+Menu Principal
 <img src="imgs/MenuPrincipal_TheLastEgg.png" alt="Logo">
