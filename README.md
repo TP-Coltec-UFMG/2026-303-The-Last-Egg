@@ -47,6 +47,15 @@ https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR
 
 Nas configurações possuímos apenas a configuração do volume. Realmente ficou a desejar em termos de acessibilidade, mas as configurações possuem um arquivo singleton/global que salva suas preferências mesmo após o fechamento do jogo. Possui alguns botões de teste para verificar se o volume funciona (obs: funciona de verdade :) ).
 
+## Divisão de Trabalho
+
+Arthur Guedes -> Programação e Animação
+Davi Elias -> Preenchimento da GDC e Preenchimento do README
+Francisco -> Preenchimento da GDC e Slides
+Arthur Fernando -> Programação e Commits
+Samuel -> História e Design
+Marcelo -> Design da GDC
+
 ## Avisos para modificação e/ou debug
 
 Para executar o nosso projeto é necessário seguir alguns procedimentos para funcionar.
