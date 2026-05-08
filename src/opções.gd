@@ -24,7 +24,7 @@ func _on_volume_efeitos_barra_value_changed(value: float):
 	ConfigFileHandler.volume_efeitos = value
 	ConfigFileHandler.aplicar_volumes()
 	ConfigFileHandler.salvar_config()
-	
+
 func _on_botão_música_teste_pressed(): #teste da música
 	$"MarginContainer/VBoxContainer/Botão_Música_Teste/Musica".play()
 		
@@ -36,3 +36,4 @@ func _on_voltar_teste_pressed(): #muda a cena atual para o menu.
 	
 func _on_voltar_teste_2_pressed():
 	get_tree().change_scene_to_file("res://tela_inicial.tscn")
+	

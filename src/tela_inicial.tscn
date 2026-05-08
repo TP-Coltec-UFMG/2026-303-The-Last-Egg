@@ -1,23 +1,32 @@
-[gd_scene format=3 uid="uid://cw4qkv5tg5x7e"]
+[gd_scene format=3 uid="uid://cuom4xqnlyly2"]
 
 [ext_resource type="Script" uid="uid://b8yyom18mkfdl" path="res://tela_inicial.gd" id="1_g50o1"]
-[ext_resource type="SpriteFrames" uid="uid://jcl7d0onem57" path="res://animação/AnimaçãoOvo.aseprite" id="1_qtomq"]
+[ext_resource type="SpriteFrames" uid="uid://cjgyupganw11" path="res://animação/AnimaçãoOvo.aseprite" id="1_qtomq"]
+[ext_resource type="Texture2D" uid="uid://bmfe1ja14dsa5" path="res://background/background_teste.jpg" id="2_sbn3v"]
 [ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://Fonte/GrapeSoda.ttf" id="3_8bm7t"]
 [ext_resource type="AudioStream" uid="uid://n7n5del6tyli" path="res://música/musicaintro.mp3" id="4_w63eu"]
 [ext_resource type="AudioStream" uid="uid://dgvuatta6r1xe" path="res://SFX/efeito_ninho.mp3" id="5_ek0m7"]
 [ext_resource type="AudioStream" uid="uid://bck3i74c0p7qd" path="res://SFX/efeito_ovo.mp3" id="6_hftsj"]
 [ext_resource type="AudioStream" uid="uid://cl2lxhvjcclo" path="res://SFX/whoosh.mp3" id="7_hftsj"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsqm0"]
+texture = ExtResource("2_sbn3v")
+modulate_color = Color(0.38909814, 0.39710915, 0.39710915, 1)
+
 [node name="Tela_Inicial" type="Node2D" unique_id=1845400401]
 script = ExtResource("1_g50o1")
 
+[node name="Panel" type="Panel" parent="." unique_id=1789019044]
+offset_top = 3.0
+offset_right = 1151.0
+offset_bottom = 651.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gsqm0")
+
 [node name="Animação_Tela_Inicial" type="AnimatedSprite2D" parent="." unique_id=1443392024]
-position = Vector2(581, 306.00003)
+position = Vector2(580.00006, 341)
 scale = Vector2(2.484375, 2.7716343)
 sprite_frames = ExtResource("1_qtomq")
 animation = &"intro"
-frame = 42
-frame_progress = 0.85677326
 
 [node name="Espaço_Começar" type="Label" parent="." unique_id=244953395]
 offset_left = 105.0

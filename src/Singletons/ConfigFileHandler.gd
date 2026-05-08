@@ -20,20 +20,22 @@ var volume_efeitos = 0.5
 #Toda vez que eu quero trabalhar como algum tipo de música especifica, eu pego o índice do bus.
 #OBS: bus = canal de aúdio.
 
+
 var volume_geral_indice = AudioServer.get_bus_index("Master") 
 var volume_musica_indice = AudioServer.get_bus_index("Musica")
 var volume_efeitos_indice = AudioServer.get_bus_index("Efeitos")
 
 func _ready(): 
-	carregar_config_som() 
+	carregar_config_geral() 
 	aplicar_volumes()
 
-func carregar_config_som(): #método responsavel para verificar se o arquivo existe e carrega os valores do som 
+func carregar_config_geral(): #método responsavel para verificar se o arquivo existe e carrega os valores atribuidos na classe opcoes.
 	if FileAccess.file_exists(CONFIGURACOES_CAMINHO_ARQUIVO): #verifica se o arquivo existe
 		config.load(CONFIGURACOES_CAMINHO_ARQUIVO) #carrega o arquivo com todos os valores definidos pelo proprio usuario.
 		volume_geral = config.get_value("audio", "geral", volume_geral)
 		volume_musica = config.get_value("audio", "musica", volume_musica)
 		volume_efeitos = config.get_value("audio", "efeitos", volume_efeitos)
+		
 	else: #se não existir, vai salvar como padrão de 0.5 em tudo
 		salvar_config()
 		
@@ -52,3 +54,4 @@ func aplicar_volumes(): #aqui que a magica dos sons funciona
 	AudioServer.set_bus_volume_db(volume_musica_indice, linear_to_db(volume_musica))
 	
 	AudioServer.set_bus_volume_db(volume_efeitos_indice, linear_to_db(volume_efeitos))
+	

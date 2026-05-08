@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cjv1u56sc760v"
+path="res://.godot/imported/Menu_nomeDoJogo.aseprite-091852d25b2a5a5388632585c06f2709.res"
+
+[deps]
+
+source_file="res://Menu/Menu_nomeDoJogo.aseprite"
+dest_files=["res://.godot/imported/Menu_nomeDoJogo.aseprite-091852d25b2a5a5388632585c06f2709.res"]
+
+[params]
+

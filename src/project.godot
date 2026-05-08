@@ -8,27 +8,20 @@
 
 config_version=5
 
-[animation]
-
-compatibility/default_parent_skeleton_in_mesh_instance_3d=true
-
 [application]
 
-config/name="Menu"
-run/main_scene="uid://cw4qkv5tg5x7e"
+config/name="menu"
+run/main_scene="uid://cuom4xqnlyly2"
 config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="uid://crdtu5ogqeji7"
+buses/default_bus_layout="uid://bqo0e2qs44qwf"
 
 [autoload]
 
 ConfigFileHandler="*uid://dmsdrhkb35ccn"
-
-[editor]
-
-version_control/autoload_on_startup=true
 
 [editor_plugins]
 
