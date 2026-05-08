@@ -28,7 +28,6 @@ https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR
 ## Tela Inicial 
 <img src="imgs/TelaInicial_TheLastEgg.png" alt="Logo">
 
-<img src="gif/AnimaçãoOvo.gif" alt="Animação">
 
 - Na tela inicial do nosso jogo possui uma animação curtinha feito no aplicativo Aseprite com uma música tocando de fundo e com efeitos sonoros para cada frame da animação.
 - Você pode acessar o nosso menu apertando o espaço.
