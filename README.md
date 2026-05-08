@@ -59,7 +59,7 @@ Para executar o nosso projeto é necessário seguir alguns procedimentos para fu
 
 - Caso não consegue executar mesmo seguindo esses passos, pfvr me contata.
   
-## Avisos
+## Slides
 
 Slides: https://canva.link/0gx7ckfm0sdpbou
 
