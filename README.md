@@ -37,4 +37,8 @@ https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR
   - **Configurações:** Leva ao painel de configurações do jogo.
   - **Sair:** Faz sair do jogo
 
+## Configurações
+<img src= "Configurações_TheLastEgg.png" alt="Logo">
+
+Nas configurações possuímos apenas a configuração do volume. Realmente ficou a desejar em termos de acessibilidade, mas as configurações possuem um arquivo singleton/global que salva suas preferências mesmo após o fechamento do jogo. Possui alguns botões de teste para verificar se o volume funciona (obs: funciona de verdade :) ).
 
