@@ -8,9 +8,11 @@
 - Marcelo Pezzini
 - Samuel Hanry
 
-## História
+<div ID="titulo">
+    <h1  align="center">O último ovo</h1>
+</div>
 
-O jogo The Last Egg retrata a jornada do passaro Falco em busca de restaurar a sua espécie que esta em risco de estinção. Durante a jornada Falco vai passar por vários desafios como derrotar predadores e conquistar territórios para impedir que sua espécie seja extinta.
+O jogo "O último ovo" retrata a jornada do passaro Falco em busca de restaurar a sua espécie que esta em risco de estinção. Durante a jornada Falco vai passar por vários desafios como derrotar predadores e conquistar territórios para impedir que sua espécie seja extinta.
 
 ## Planilha de Acessibilidade
 https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR_M4/edit?gid=107741830#gid=107741830
