@@ -58,5 +58,9 @@ Para executar o nosso projeto é necessário seguir alguns procedimentos para fu
 - O sistema de BUS(canais de aúdio) é preciso configurar para o caminho correto. Para isso vc vai em Projeto -> Geral -> Áudio -> Layout Padrão de Canais e coloque esse caminho: res://BUS/default_bus_layout.tres.
 
 - Caso não consegue executar mesmo seguindo esses passos, pfvr me contata.
+  
+## Avisos
+
+Slides: https://canva.link/9qcdcpl1nr8rb7c
 
 
