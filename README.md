@@ -22,19 +22,19 @@ https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR
 ## Pré-requisitos
 - Godot Engine (4.5 Stable)
 
-## Tela Inicial e Menu Principal
-Tela Inicial
+## Tela Inicial 
 <img src="imgs/TelaInicial_TheLastEgg.png" alt="Logo">
 
 - Na tela inicial do nosso jogo possui uma animação curtinha feito no aplicativo Aseprite com uma música tocando de fundo e com efeitos sonoros para cada frame da animação.
 - Você pode acessar o nosso menu apertando o espaço.
 
-Menu Principal
+## Menu Principal
 <img src="imgs/MenuPrincipal_TheLastEgg.png" alt="Logo">
 
  O menu principal apresenta três botões, cada um deles apresenta diferentes funcionalidades:</p>
 
-  - **Jogar:** Faz o jogo começar, porém não o jogo não possui nenhum elemento do nosso proejto, apenas um placeholder.
-  - **Configurações:** leva ao painel de configurações do jogo.
-  - **Sair:** faz sair do jogo
+  - **Jogar:** Inicia o jogo, porém atualmente ele ainda não possui os elementos do projeto final, sendo apenas um placeholder.
+  - **Configurações:** Leva ao painel de configurações do jogo.
+  - **Sair:** Faz sair do jogo
+
 
