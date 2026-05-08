@@ -61,6 +61,6 @@ Para executar o nosso projeto é necessário seguir alguns procedimentos para fu
   
 ## Avisos
 
-Slides: https://canva.link/9qcdcpl1nr8rb7c
+Slides: https://canva.link/0gx7ckfm0sdpbou
 
 
