@@ -8,9 +8,8 @@
 - Marcelo Pezzini
 - Samuel Hanry
 
-<div ID="titulo">
-    <h1  align="center">O último ovo</h1>
-</div>
+## O último ovo
+
 
 O jogo "O último ovo" retrata a jornada do passaro Falco em busca de restaurar a sua espécie que esta em risco de estinção. Durante a jornada Falco vai passar por vários desafios como derrotar predadores e conquistar territórios para impedir que sua espécie seja extinta.
 
