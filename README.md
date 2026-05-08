@@ -21,6 +21,9 @@ https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR
 
 ## Pré-requisitos
 - Godot Engine (4.5 Stable)
+  
+## Ferramentas de Desenvolvimento
+- Aseprite (para criação de sprites e animações)
 
 ## Tela Inicial 
 <img src="imgs/TelaInicial_TheLastEgg.png" alt="Logo">
