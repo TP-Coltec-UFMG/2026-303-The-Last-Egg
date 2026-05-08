@@ -27,8 +27,14 @@ Tela Inicial
 <img src="imgs/TelaInicial_TheLastEgg.png" alt="Logo">
 
 - Na tela inicial do nosso jogo possui uma animação curtinha feito no aplicativo Aseprite com uma música tocando de fundo e com efeitos sonoros para cada frame da animação.
-- Você pode acessar nosso menu apertando o espaço.
+- Você pode acessar o nosso menu apertando o espaço.
 
 Menu Principal
 <img src="imgs/MenuPrincipal_TheLastEgg.png" alt="Logo">
+
+ O menu principal apresenta três botões, cada um deles apresenta diferentes funcionalidades:</p>
+
+  - **Jogar:** Faz o jogo começar, porém não o jogo não possui nenhum elemento do nosso proejto, apenas um placeholder.
+  - **Configurações:** leva ao painel de configurações do jogo.
+  - **Sair:** faz sair do jogo
 
