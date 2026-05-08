@@ -54,7 +54,7 @@ Nas configurações possuímos apenas a configuração do volume. Realmente fico
 - Francisco → Preenchimento da GDC e Slides  
 - Arthur Fernando → Programação e Commits  
 - Samuel → História e Design  
-- Marcelo → Design da GDC  
+- Marcelo → Design da GDC e Design do Background
 
 ## Avisos para modificação e/ou debug
 
