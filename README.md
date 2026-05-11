@@ -1,12 +1,12 @@
 # 2026-303-The-Last-Egg
 
 ## Grupo
-- Arthur Fernando
-- Arthur Guedes
-- Davi Elias
-- Francisco Almeida
-- Marcelo Pezzini
-- Samuel Hanry
+- Arthur Guedes → Programação e Animação  
+- Davi Elias → Preenchimento da GDC e README  
+- Francisco → Preenchimento da GDC e Slides  
+- Arthur Fernando → Programação e Commits  
+- Samuel → História e Design  
+- Marcelo → Design da GDC e Design do Background
 
 ## O último ovo
 
@@ -46,15 +46,6 @@ https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR
 <img src="imgs/Configurações_TheLastEgg.png" alt="Logo">
 
 Nas configurações possuímos apenas a configuração do volume. Realmente ficou a desejar em termos de acessibilidade, mas as configurações possuem um arquivo singleton/global que salva suas preferências mesmo após o fechamento do jogo. Possui alguns botões de teste para verificar se o volume funciona (obs: funciona de verdade :) ).
-
-## Divisão de Trabalho
-
-- Arthur Guedes → Programação e Animação  
-- Davi Elias → Preenchimento da GDC e README  
-- Francisco → Preenchimento da GDC e Slides  
-- Arthur Fernando → Programação e Commits  
-- Samuel → História e Design  
-- Marcelo → Design da GDC e Design do Background
 
 ## Avisos para modificação e/ou debug
 
