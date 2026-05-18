@@ -13,7 +13,6 @@ config_version=5
 config/name="menu"
 run/main_scene="uid://cuom4xqnlyly2"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
 [audio]
 

@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://c3lg6kd2sipjk"]
+
+[ext_resource type="Script" uid="uid://dq8pw2t8puw8k" path="res://scripts/menu_principal.gd" id="1_ul6ys"]
+[ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://Fonte/GrapeSoda.ttf" id="2_gmcsc"]
+[ext_resource type="Texture2D" uid="uid://bbor6hrkuh71v" path="res://Menu/Fundo do menu.png" id="2_ns3he"]
+[ext_resource type="AudioStream" uid="uid://cpt48lk3yqaqx" path="res://SFX/som_do_botão.mp3" id="4_ns3he"]
+[ext_resource type="Texture2D" uid="uid://cv8np55xeq3mf" path="res://Menu/Menu_Jogar.png" id="4_yxm4i"]
+[ext_resource type="Texture2D" uid="uid://cehg8xg442kog" path="res://Menu/Menu_configuracoes.png" id="5_b574n"]
+[ext_resource type="Texture2D" uid="uid://dpu15dbfymkdy" path="res://Menu/Menu_sairDoJogo.png" id="6_611wp"]
+
+[node name="Menu" type="Node2D" unique_id=2071003191]
+script = ExtResource("1_ul6ys")
+
+[node name="Button_manager" type="Control" parent="." unique_id=357556370]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="background_menu" type="Sprite2D" parent="Button_manager" unique_id=1738860797]
+position = Vector2(548, 329)
+scale = Vector2(0.80536914, 0.9261364)
+texture = ExtResource("2_ns3he")
+
+[node name="Titulo" type="Label" parent="Button_manager" unique_id=363775244]
+layout_mode = 0
+offset_left = 725.0
+offset_top = 12.0
+offset_right = 1091.0
+offset_bottom = 126.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 11
+theme_override_fonts/font = ExtResource("2_gmcsc")
+theme_override_font_sizes/font_size = 74
+text = "O útimo ovo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Começar" type="TextureButton" parent="Button_manager" unique_id=431139685]
+layout_mode = 0
+offset_left = 778.0
+offset_top = 164.0
+offset_right = 1078.0
+offset_bottom = 220.0
+size_flags_vertical = 3
+texture_normal = ExtResource("4_yxm4i")
+
+[node name="Opções" type="TextureButton" parent="Button_manager" unique_id=222207840]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 280.0
+offset_right = 1076.0
+offset_bottom = 430.0
+size_flags_vertical = 3
+texture_normal = ExtResource("5_b574n")
+
+[node name="Sair" type="TextureButton" parent="Button_manager" unique_id=195757159]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 425.0
+offset_right = 1030.0
+offset_bottom = 575.0
+size_flags_vertical = 3
+texture_normal = ExtResource("6_611wp")
+
+[node name="SomDoBotão" type="AudioStreamPlayer" parent="." unique_id=1175488830]
+stream = ExtResource("4_ns3he")
+bus = &"Efeitos"
+
+[connection signal="pressed" from="Button_manager/Começar" to="." method="_on_começar_pressed"]
+[connection signal="pressed" from="Button_manager/Opções" to="." method="_on_opções_pressed"]
+[connection signal="pressed" from="Button_manager/Sair" to="." method="_on_sair_pressed"]
