@@ -47,15 +47,11 @@ https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR
 
 Nas configurações possuímos apenas a configuração do volume. Realmente ficou a desejar em termos de acessibilidade, mas as configurações possuem um arquivo singleton/global que salva suas preferências mesmo após o fechamento do jogo. Possui alguns botões de teste para verificar se o volume funciona (obs: funciona de verdade :) ).
 
-## Avisos para modificação e/ou debug
+## !! Avisos para modificação e/ou debug !!
 
-Para executar o nosso projeto é necessário seguir alguns procedimentos para funcionar.
+-Sempre importe pelo godot caso for usar o zip do nosso projeto!!!! Se você tentar importar manualmente não será reconhecido os arquivos .godot e o project.godot
 
-- No nosso jogo possui um sistema de saves da configuração, ou seja , é preciso localizar o arquivo global que é ConfigFileHandler no caminho res://Singletons/ConfigFileHandler.gd para que as configurações sejam salvadas e carregadas adequadamente. Para colocar um arquivo global vc vai em Projeto -> configurações Do Projeto -> Globais e depois adicionar o caminho e o arquivo ditos anteriormente.
-
-- O sistema de BUS(canais de aúdio) é preciso configurar para o caminho correto. Para isso vc vai em Projeto -> Geral -> Áudio -> Layout Padrão de Canais e coloque esse caminho: res://BUS/default_bus_layout.tres.
-
-- Caso não consegue executar mesmo seguindo esses passos,por favor me contata:a2023951334@teiacoltec.org.
+-Caso não conseguir executar mesmo seguindo esses passos,por favor me contata:a2023951334@teiacoltec.org.
   
 ## Slides
 
