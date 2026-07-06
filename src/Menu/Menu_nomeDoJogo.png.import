@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gotgtckarsuc"
-path="res://.godot/imported/Menu_nomeDoJogo.png-ea419b7df517219a46e041b7239b20e2.ctex"
+path="res://.godot/imported/Menu_nomeDoJogo.png-d652e0413613fe5617b9a76bd77be070.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Menu_nomeDoJogo.png"
-dest_files=["res://.godot/imported/Menu_nomeDoJogo.png-ea419b7df517219a46e041b7239b20e2.ctex"]
+source_file="res://menu/Menu_nomeDoJogo.png"
+dest_files=["res://.godot/imported/Menu_nomeDoJogo.png-d652e0413613fe5617b9a76bd77be070.ctex"]
 
 [params]
 

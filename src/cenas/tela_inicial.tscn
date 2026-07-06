@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8yyom18mkfdl" path="res://scripts/tela_inicial.gd" id="1_g50o1"]
 [ext_resource type="Texture2D" uid="uid://bmfe1ja14dsa5" path="res://background/background_teste.jpg" id="2_sbn3v"]
-[ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://Fonte/GrapeSoda.ttf" id="3_8bm7t"]
+[ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://fonte/GrapeSoda.ttf" id="3_8bm7t"]
 [ext_resource type="AudioStream" uid="uid://n7n5del6tyli" path="res://música/musicaintro.mp3" id="4_w63eu"]
 [ext_resource type="AudioStream" uid="uid://dgvuatta6r1xe" path="res://SFX/efeito_ninho.mp3" id="5_ek0m7"]
 [ext_resource type="AudioStream" uid="uid://bck3i74c0p7qd" path="res://SFX/efeito_ovo.mp3" id="6_hftsj"]
@@ -195,21 +195,21 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("52_ydtlm")
 }],
-"loop": true,
+"loop": 1,
 "name": &"intro",
 "speed": 8.0
 }]
 
-[node name="Tela_Inicial" type="Node2D" unique_id=1845400401]
+[node name="Tela_Inicial" type="Node2D" unique_id=1202314882]
 script = ExtResource("1_g50o1")
 
-[node name="Panel" type="Panel" parent="." unique_id=1789019044]
+[node name="Panel" type="Panel" parent="." unique_id=1409378052]
 offset_top = 3.0
 offset_right = 1151.0
 offset_bottom = 651.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsqm0")
 
-[node name="Espaço_Começar" type="Label" parent="." unique_id=244953395]
+[node name="Espaço_Começar" type="Label" parent="." unique_id=2007668990]
 offset_left = 105.0
 offset_top = 549.0
 offset_right = 1059.0
@@ -219,23 +219,19 @@ theme_override_font_sizes/font_size = 55
 text = "PRESSIONE ESPAÇO PARA COMEÇAR"
 horizontal_alignment = 1
 
-[node name="Musicaintro" type="AudioStreamPlayer" parent="." unique_id=135139981]
+[node name="Musicaintro" type="AudioStreamPlayer" parent="." unique_id=1311277259]
 stream = ExtResource("4_w63eu")
-bus = &"Musica"
 
-[node name="EfeitoNinho" type="AudioStreamPlayer" parent="." unique_id=1090806380]
+[node name="EfeitoNinho" type="AudioStreamPlayer" parent="." unique_id=1273823375]
 stream = ExtResource("5_ek0m7")
-bus = &"Efeitos"
 
-[node name="EfeitoOvo" type="AudioStreamPlayer" parent="." unique_id=1336775606]
+[node name="EfeitoOvo" type="AudioStreamPlayer" parent="." unique_id=1973283277]
 stream = ExtResource("6_hftsj")
-bus = &"Efeitos"
 
-[node name="Whoosh" type="AudioStreamPlayer" parent="." unique_id=1882523740]
+[node name="Whoosh" type="AudioStreamPlayer" parent="." unique_id=242687075]
 stream = ExtResource("7_hftsj")
-bus = &"Efeitos"
 
-[node name="Animação_Tela_Inicial" type="AnimatedSprite2D" parent="." unique_id=746990239]
+[node name="Animação_Tela_Inicial" type="AnimatedSprite2D" parent="." unique_id=1183135864]
 position = Vector2(588.00006, 308)
 scale = Vector2(2.2096353, 2.597957)
 sprite_frames = SubResource("SpriteFrames_b0vyf")

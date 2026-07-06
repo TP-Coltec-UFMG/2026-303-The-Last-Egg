@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://8q55lesk2muh"]
+
+[ext_resource type="Shader" uid="uid://dhts7pwu2hq7r" path="res://Shaders/filtro_daltonismo.gdshader" id="1_0o1cq"]
+[ext_resource type="Script" uid="uid://br1i34bvx6yf0" path="res://scripts/filtroglobal.gd" id="1_1e55i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_40epd"]
+shader = ExtResource("1_0o1cq")
+shader_parameter/filter_mode = 0
+shader_parameter/dalton_intensity = 1.0
+shader_parameter/high_contrast = false
+shader_parameter/contrast = 1.4
+shader_parameter/saturation = 1.2
+shader_parameter/brightness = 0.0
+
+[node name="Control" type="Control" unique_id=1711996487]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1e55i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=579783407]
+
+[node name="modo_acessibilidade" type="ColorRect" parent="CanvasLayer" unique_id=1239351215]
+material = SubResource("ShaderMaterial_40epd")
+anchors_preset = -1
+anchor_right = 1.1029462
+anchor_bottom = 1.0359845
+offset_right = -118.593994
+offset_bottom = 2.196045
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1029462, 0.98438936)
+size_flags_horizontal = 4
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true

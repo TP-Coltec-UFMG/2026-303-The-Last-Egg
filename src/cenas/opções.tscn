@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://dj3ql0wprwjct"]
 
-[ext_resource type="Script" uid="uid://dyqc4jj8flu0u" path="res://scripts/opções.gd" id="1_85cj8"]
-[ext_resource type="AudioStream" uid="uid://uub2qu1w6mxt" path="res://música/Música.mp3" id="2_dhd35"]
-[ext_resource type="AudioStream" uid="uid://cpt48lk3yqaqx" path="res://SFX/som_do_botão.mp3" id="3_dhd35"]
+[ext_resource type="Script" uid="uid://dyqc4jj8flu0u" path="res://scripts/opções.gd" id="1_tdy4x"]
+[ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://fonte/GrapeSoda.ttf" id="2_4fjk0"]
+[ext_resource type="Texture2D" uid="uid://d3e6lhel3rrym" path="res://sprites/sprites_ovo/tile036.png" id="3_tdy4x"]
 
-[node name="opções" type="Control" unique_id=702954808]
+[node name="opções" type="Control" unique_id=1179974954]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_85cj8")
+script = ExtResource("1_tdy4x")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1612624854]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1659482818]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,55 +21,68 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=536982679]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1206352985]
 layout_mode = 2
+theme_override_constants/separation = 12
 
-[node name="Volume_Geral_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1993201847]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1694469171]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4fjk0")
+theme_override_font_sizes/font_size = 55
+text = "OPÇÕES GERAIS"
+horizontal_alignment = 1
+
+[node name="Volume_Geral_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1664515548]
 layout_mode = 2
 text = "Volume Geral:"
 
-[node name="Volume_Geral_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=12284583]
+[node name="Volume_Geral_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=1601401531]
 layout_mode = 2
 max_value = 1.0
 step = 0.01
 
-[node name="Volume_Musica_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1995309057]
+[node name="Volume_Musica_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=207940996]
 layout_mode = 2
 text = "Volume da Música:"
 
-[node name="Volume_Musica_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=552008545]
+[node name="Volume_Musica_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=1178940744]
 layout_mode = 2
 max_value = 1.0
 step = 0.01
 
-[node name="Volume_Efeitos_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1334386206]
+[node name="Volume_Efeitos_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1181999048]
 layout_mode = 2
 text = "Volume de Efeitos:"
 
-[node name="Volume_Efeitos_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=630910048]
+[node name="Volume_Efeitos_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=652873480]
 layout_mode = 2
 max_value = 1.0
 step = 0.01
 
-[node name="Botão_Música_Teste" type="Button" parent="MarginContainer/VBoxContainer" unique_id=76268772]
+[node name="Daltonismo_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2077067443]
 layout_mode = 2
-text = "botão da música
-"
+text = "Escolhe o tipo de daltonismo:"
 
-[node name="Musica" type="AudioStreamPlayer" parent="MarginContainer/VBoxContainer/Botão_Música_Teste" unique_id=473615260]
-stream = ExtResource("2_dhd35")
-bus = &"Musica"
-
-[node name="Botão_Efeitos_Teste" type="Button" parent="MarginContainer/VBoxContainer" unique_id=309239454]
+[node name="Daltonismo_Config" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=481839390]
 layout_mode = 2
-text = "botão dos efeitos
-"
+item_count = 4
+popup/item_0/text = "Desligado"
+popup/item_0/id = 0
+popup/item_1/text = "Protanopia "
+popup/item_1/id = 1
+popup/item_2/text = "Deuteranopia"
+popup/item_2/id = 2
+popup/item_3/text = "Tritanopia"
+popup/item_3/id = 3
 
-[node name="SomDoBotão" type="AudioStreamPlayer" parent="MarginContainer/VBoxContainer/Botão_Efeitos_Teste" unique_id=1507290488]
-stream = ExtResource("3_dhd35")
-bus = &"Efeitos"
+[node name="AltoContraste_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1484588007]
+layout_mode = 2
+text = "Alto Contraste:"
 
-[node name="Voltar_Teste" type="Button" parent="." unique_id=1800839342]
+[node name="AltoContraste_CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=958037184]
+layout_mode = 2
+
+[node name="Voltar_TelaInicial" type="Button" parent="." unique_id=1771652408]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 566.0
@@ -77,7 +90,7 @@ offset_right = 179.0
 offset_bottom = 620.0
 text = "voltar"
 
-[node name="Voltar_Teste2" type="Button" parent="." unique_id=246848775]
+[node name="Voltar_Abertura" type="Button" parent="." unique_id=1435838887]
 layout_mode = 0
 offset_left = 215.0
 offset_top = 566.0
@@ -86,14 +99,35 @@ offset_bottom = 620.0
 text = "voltar para intro
 "
 
+[node name="Acessibilidade_Botao" type="Button" parent="." unique_id=1192999245]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 568.0
+offset_right = 552.0
+offset_bottom = 622.0
+text = "ir para opções de controle
+
+
+"
+
+[node name="Tile036" type="Sprite2D" parent="." unique_id=1711637826]
+position = Vector2(922.5, 509.5)
+scale = Vector2(1.0286459, 1.2259616)
+texture = ExtResource("3_tdy4x")
+
 [connection signal="changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_geral_barra_changed"]
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_geral_barra_value_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_geral_barra_value_changed"]
 [connection signal="changed" from="MarginContainer/VBoxContainer/Volume_Musica_Barra" to="." method="_on_volume_musica_barra_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Musica_Barra" to="." method="_on_volume_musica_barra_value_changed"]
 [connection signal="changed" from="MarginContainer/VBoxContainer/Volume_Efeitos_Barra" to="." method="_on_volume_efeitos_barra_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Efeitos_Barra" to="." method="_on_volume_efeitos_barra_value_changed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Botão_Música_Teste" to="." method="_on_botão_música_teste_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Botão_Efeitos_Teste" to="." method="_on_botão_efeitos_teste_pressed"]
-[connection signal="pressed" from="Voltar_Teste" to="." method="_on_voltar_teste_pressed"]
-[connection signal="pressed" from="Voltar_Teste2" to="." method="_on_voltar_teste_2_pressed"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/Daltonismo_Config" to="." method="_on_daltonismo_config_item_selected"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/AltoContraste_CheckBox" to="." method="_on_alto_contraste_check_box_toggled"]
+[connection signal="pressed" from="Voltar_TelaInicial" to="." method="_on_voltar_tela_inicial_pressed"]
+[connection signal="pressed" from="Voltar_TelaInicial" to="." method="_on_voltar_teste_pressed"]
+[connection signal="pressed" from="Voltar_Abertura" to="." method="_on_voltar_teste_2_pressed"]
+[connection signal="pressed" from="Voltar_Abertura" to="." method="_on_voltar_abertura_pressed"]
+[connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_voltar_teste_3_pressed"]
+[connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_voltar_teste_2_pressed"]
+[connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_acessibilidade_botao_pressed"]

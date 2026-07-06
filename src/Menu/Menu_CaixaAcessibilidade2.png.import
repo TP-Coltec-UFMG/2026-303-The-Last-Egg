@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brj1g433kvtrt"
-path="res://.godot/imported/Menu_CaixaAcessibilidade2.png-6eeca16d9d60a1c96eae42ea46bb1695.ctex"
+path="res://.godot/imported/Menu_CaixaAcessibilidade2.png-836e085e056990b4fcad3144560bde95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Menu_CaixaAcessibilidade2.png"
-dest_files=["res://.godot/imported/Menu_CaixaAcessibilidade2.png-6eeca16d9d60a1c96eae42ea46bb1695.ctex"]
+source_file="res://menu/Menu_CaixaAcessibilidade2.png"
+dest_files=["res://.godot/imported/Menu_CaixaAcessibilidade2.png-836e085e056990b4fcad3144560bde95.ctex"]
 
 [params]
 
