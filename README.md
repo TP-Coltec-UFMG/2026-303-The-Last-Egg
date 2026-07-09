@@ -47,6 +47,10 @@ O jogo "O último ovo" retrata a jornada do pássaro Falco em busca de restaurar
 
 - Inicialmente temos um placeholder de um cenário para o ninho e o protagonista, o passáro atualmente só consegue andar e pular pelo ninho, entretanto futuramente será adicionado novas mecânicas como um pequeno voo e ataques.
 
+## GDC (Game Design Canvas)
+
+<img src="imgs/GDC .png" alt="GDC">
+
 ## Configurações
 <img src="imgs/Configurações_TheLastEgg.png" alt="Logo">
 
