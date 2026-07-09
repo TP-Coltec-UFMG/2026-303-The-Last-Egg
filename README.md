@@ -63,10 +63,14 @@ Nas configurações do nosso jogo, até o momento, há controle de volume básic
 
 <div align="center">
 <img src="imgs/andarSaira-5755 (1).png" alt="Animação de Andar" width="500">
+  
 # **Animação de andar (Sairá-apunhalada)**
+
 <img src="imgs/voouSaira-574e (1).png" alt="Animação de Voar" width="500">
+
 # **Animação de voar (Sairá-apunhalada)**
-<\div>
+
+</div>
 
 ## !! Avisos para modificação e/ou debug !!
 
