@@ -38,9 +38,14 @@ O jogo "O último ovo" retrata a jornada do pássaro Falco em busca de restaurar
 
  O menu principal apresenta três botões, cada um deles apresenta diferentes funcionalidades:</p>
 
-  - **Jogar:** Inicia o jogo, porém atualmente ele ainda não possui os elementos do projeto final, sendo apenas um placeholder.
+  - **Jogar:** Inicia o jogo e leva o jogador para primeira cena do jogo, onde o protagonista Falco vai estar em seu ninho cuidando de seu filhote (provavelmente será adicionado uma cutscene inicial posteriormente).
   - **Configurações:** Leva ao painel de configurações do jogo.
-  - **Sair:** Faz sair do jogo
+  - **Sair:** Faz sair do jogo.
+
+## Primeira Cena
+<img src="imgs/PrimeiraCena_TheLastEgg.png" alt="Ninho">
+
+- Inicialmente temos um placeholder de um cenário para o ninho e o protagonista, o passáro atualmente só consegue andar e pular pelo ninho, entretanto futuramente será adicionado novas mecânicas como um pequeno voo e ataques.
 
 ## Configurações
 <img src="imgs/Configurações_TheLastEgg.png" alt="Logo">
