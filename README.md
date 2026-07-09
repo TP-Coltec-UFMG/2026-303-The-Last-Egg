@@ -54,7 +54,7 @@ O jogo "O último ovo" retrata a jornada do pássaro Falco em busca de restaurar
 ## Configurações
 <img src="imgs/Configurações_TheLastEgg.png" alt="Logo">
 
-Nas configurações possuímos apenas a configuração do volume. Realmente ficou a desejar em termos de acessibilidade, mas as configurações possuem um arquivo singleton/global que salva suas preferências mesmo após o fechamento do jogo. Possui alguns botões de teste para verificar se o volume funciona (obs: funciona de verdade :) ).
+Nas configurações do nosso jogo, até o momento, há controle de volume básico (geral, música e efeitos sonoros). Atualmente, temos duas acessibilidades disponíveis: daltonismo e modo de alto contraste. Os tipos de daltonismo disponíveis são Protanopia, Deuteranopia e Tritanopia. No modo de alto contraste, todas as cores são realçadas para oferecer acessibilidade àqueles que têm baixa acuidade visual. No futuro, planejamos mudar toda a interface do usuário e também implementar o remapeamento de controles.
 
 ## !! Avisos para modificação e/ou debug !!
 
