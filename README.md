@@ -55,7 +55,7 @@ Nas configurações do nosso jogo, até o momento, há controle de volume básic
 
 <img src="imgs/andarSaira-5755 (1).png" alt="Sprites Andar">
 - Animação de andar 
-<img src="imgs/voouSaira-574e(1).png" alt="Sprites Voar">
+<img src="imgs/voouSaira-574e (1).png" alt="Sprites Voar">
 -Animação de voar
 
 ## GDC (Game Design Canvas)
