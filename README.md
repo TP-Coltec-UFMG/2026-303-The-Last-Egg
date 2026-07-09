@@ -11,7 +11,7 @@
 ## O último ovo
 
 
-O jogo "O último ovo" retrata a jornada do pássaro Falco em busca de restaurar a sua espécie que esta em risco de extinção. Durante a jornada Falco vai passar por vários desafios como derrotar predadores e conquistar territórios para impedir que sua espécie seja extinta.
+O jogo "O último ovo" retrata a jornada do pássaro Falco, um ave de uma especíe chamada Saíra-apunhalada. Inicialmente, Falco vivia de maneira tranquila e segura cuidando de seus ovos, até que um dia, ao sobrevoar a floresta a procura de alimentos para seus filhotes ele acaba encontrando uma pena semelhante da sua especíe e decide descer ao local para procurar algum parceiro. Ao longo do jogo Falco irá enfrentar alguns predadores e interagir com aliados à fim de descobrir alguma pista e buscar comida para seus filhos, quem sabe o que ele irá encontrar nessa jornada...
 
 ## Planilha de Acessibilidade
 [https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR_M4/edit?gid=107741830#gid=107741830](https://docs.google.com/spreadsheets/d/1XuxAyzaIyeWTHdETyp4iNFoG6s2PkvmLaqgAllg6Qu4/edit?usp=sharing)
