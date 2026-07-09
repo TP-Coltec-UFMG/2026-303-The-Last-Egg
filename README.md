@@ -53,10 +53,10 @@ Nas configurações do nosso jogo, até o momento, há controle de volume básic
 
 - Inicialmente temos um placeholder de um cenário para o ninho e o protagonista, o passáro atualmente só consegue andar e pular pelo ninho, entretanto futuramente será adicionado novas mecânicas como um pequeno voo e ataques.
 
-<img src="imgs/andarSaira-5755 (1).png" alt="Sprites Andar">
-- Animação de andar 
-<img src="imgs/voouSaira-574e (1).png" alt="Sprites Voar">
--Animação de voar
+<img src="imgs/andarSaira-5755 (1).png" alt="Animação de Andar" width="500">
+- Animação de andar (Sairá-apunhalada)
+<img src="imgs/voouSaira-574e (1).png" alt="Animação de Voar" width="500">
+-Animação de voar (Sairá-apunhalada)
 
 ## GDC (Game Design Canvas)
 
