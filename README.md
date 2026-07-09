@@ -2,7 +2,7 @@
 
 ## Grupo
 - Arthur Guedes → Programação e Animação  
-- Davi Elias → Preenchimento da GDC e README  
+- Davi Elias → Preenchimento do README e Programação  
 - Francisco → Preenchimento da GDC e Slides  
 - Arthur Fernando → Programação e Commits  
 - Samuel → História e Design  
