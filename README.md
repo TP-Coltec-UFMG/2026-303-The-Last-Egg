@@ -49,7 +49,7 @@ O jogo "O último ovo" retrata a jornada do pássaro Falco em busca de restaurar
 
 ## GDC (Game Design Canvas)
 
-<img src="imgs/GDC.png" alt="GDC">
+<img src="imgs/GDC .png" alt="GDC">
 
 ## Configurações
 <img src="imgs/Configurações_TheLastEgg.png" alt="Logo">
