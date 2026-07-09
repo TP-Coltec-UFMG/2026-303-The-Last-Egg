@@ -42,6 +42,12 @@ O jogo "O último ovo" retrata a jornada do pássaro Falco em busca de restaurar
   - **Configurações:** Leva ao painel de configurações do jogo.
   - **Sair:** Faz sair do jogo.
 
+
+## Configurações
+<img src="imgs/Configurações_TheLastEgg.png" alt="Logo">
+
+Nas configurações do nosso jogo, até o momento, há controle de volume básico (geral, música e efeitos sonoros). Atualmente, temos duas acessibilidades disponíveis: daltonismo e modo de alto contraste. Os tipos de daltonismo disponíveis são Protanopia, Deuteranopia e Tritanopia. No modo de alto contraste, todas as cores são realçadas para oferecer acessibilidade àqueles que têm baixa acuidade visual. No futuro, planejamos mudar toda a interface do usuário e também implementar o remapeamento de controles.
+
 ## Primeira Cena
 <img src="imgs/PrimeiraCena_TheLastEgg.png" alt="Ninho">
 
@@ -50,11 +56,6 @@ O jogo "O último ovo" retrata a jornada do pássaro Falco em busca de restaurar
 ## GDC (Game Design Canvas)
 
 <img src="imgs/GDC .png" alt="GDC">
-
-## Configurações
-<img src="imgs/Configurações_TheLastEgg.png" alt="Logo">
-
-Nas configurações do nosso jogo, até o momento, há controle de volume básico (geral, música e efeitos sonoros). Atualmente, temos duas acessibilidades disponíveis: daltonismo e modo de alto contraste. Os tipos de daltonismo disponíveis são Protanopia, Deuteranopia e Tritanopia. No modo de alto contraste, todas as cores são realçadas para oferecer acessibilidade àqueles que têm baixa acuidade visual. No futuro, planejamos mudar toda a interface do usuário e também implementar o remapeamento de controles.
 
 ## !! Avisos para modificação e/ou debug !!
 
