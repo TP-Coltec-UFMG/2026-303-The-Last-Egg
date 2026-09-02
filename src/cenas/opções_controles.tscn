@@ -28,10 +28,10 @@ horizontal_alignment = 1
 
 [node name="Voltar_TelaInicial" type="Button" parent="." unique_id=1771652408]
 layout_mode = 0
-offset_left = 491.0
-offset_top = 533.0
-offset_right = 652.0
-offset_bottom = 587.0
+offset_left = 430.0
+offset_top = 542.0
+offset_right = 591.0
+offset_bottom = 596.0
 text = "voltar"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=104194834]
@@ -47,143 +47,138 @@ theme_override_constants/margin_top = 90
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1290804778]
+[node name="Controles" type="VBoxContainer" parent="MarginContainer" unique_id=1290804778]
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1225047407]
+[node name="Label" type="Label" parent="MarginContainer/Controles" unique_id=1225047407]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_lg72o")
 theme_override_font_sizes/font_size = 45
 text = "Movimentos"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=742340980]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Controles" unique_id=742340980]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=889102456]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Controles" unique_id=889102456]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=604313173]
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer" unique_id=604313173]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_lg72o")
 theme_override_font_sizes/font_size = 33
 text = "Esquerda"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=978143942]
+[node name="Esquerda" type="Button" parent="MarginContainer/Controles/HBoxContainer" unique_id=978143942]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1687562184]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Controles" unique_id=1687562184]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1551432347]
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer2" unique_id=1551432347]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_lg72o")
 theme_override_font_sizes/font_size = 33
 text = "Direita"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=775134006]
+[node name="Direita" type="Button" parent="MarginContainer/Controles/HBoxContainer2" unique_id=775134006]
 layout_mode = 2
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=867137875]
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/Controles" unique_id=867137875]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1022600239]
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer3" unique_id=1022600239]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_lg72o")
 theme_override_font_sizes/font_size = 33
 text = "Baixo"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=273874551]
+[node name="Baixo" type="Button" parent="MarginContainer/Controles/HBoxContainer3" unique_id=273874551]
 layout_mode = 2
 
-[node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1111941002]
+[node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/Controles" unique_id=1111941002]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer7" unique_id=2088263294]
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer7" unique_id=2088263294]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_lg72o")
 theme_override_font_sizes/font_size = 33
 text = "Cima"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer7" unique_id=515702465]
+[node name="Cima" type="Button" parent="MarginContainer/Controles/HBoxContainer7" unique_id=515702465]
 layout_mode = 2
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=687444543]
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/Controles" unique_id=687444543]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1079123786]
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer4" unique_id=1079123786]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_lg72o")
 theme_override_font_sizes/font_size = 33
 text = "Pular"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2066437813]
+[node name="Pular" type="Button" parent="MarginContainer/Controles/HBoxContainer4" unique_id=2066437813]
 layout_mode = 2
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=720692229]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=820101988]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 33
-text = "Voar"
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1472489935]
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/Controles" unique_id=1267741137]
 layout_mode = 2
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1267741137]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1995249965]
+[node name="Label2" type="Label" parent="MarginContainer/Controles" unique_id=1995249965]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_lg72o")
 theme_override_font_sizes/font_size = 45
 text = "Ações"
 horizontal_alignment = 1
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1473255791]
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/Controles" unique_id=1473255791]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=669076374]
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer6" unique_id=669076374]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_lg72o")
 theme_override_font_sizes/font_size = 33
 text = "Interagir"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=116775560]
+[node name="Interagir" type="Button" parent="MarginContainer/Controles/HBoxContainer6" unique_id=116775560]
 layout_mode = 2
 
-[node name="HBoxContainer8" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1842701107]
+[node name="HBoxContainer8" type="HBoxContainer" parent="MarginContainer/Controles" unique_id=1842701107]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer8" unique_id=570079690]
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer8" unique_id=570079690]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_lg72o")
 theme_override_font_sizes/font_size = 33
 text = "Atacar"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer8" unique_id=379312284]
+[node name="Atacar" type="Button" parent="MarginContainer/Controles/HBoxContainer8" unique_id=379312284]
 layout_mode = 2
+
+[node name="restaurar" type="Button" parent="." unique_id=935733064]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 542.0
+offset_right = 811.0
+offset_bottom = 596.0
+text = "restaurar controle padrão"
 
 [connection signal="pressed" from="Voltar_TelaInicial" to="." method="_on_voltar_teste_pressed"]
 [connection signal="pressed" from="Voltar_TelaInicial" to="." method="_on_voltar_tela_inicial_pressed"]
+[connection signal="pressed" from="restaurar" to="." method="_on_restaurar_pressed"]

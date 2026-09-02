@@ -128,6 +128,6 @@ texture = ExtResource("3_tdy4x")
 [connection signal="pressed" from="Voltar_TelaInicial" to="." method="_on_voltar_tela_inicial_pressed"]
 [connection signal="pressed" from="Voltar_Abertura" to="." method="_on_voltar_teste_2_pressed"]
 [connection signal="pressed" from="Voltar_Abertura" to="." method="_on_voltar_abertura_pressed"]
-[connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_voltar_teste_2_pressed"]
 [connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_voltar_teste_3_pressed"]
+[connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_voltar_teste_2_pressed"]
 [connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_acessibilidade_botao_pressed"]

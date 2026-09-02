@@ -37,6 +37,15 @@ var controles_padrao = {
 	"Interagir": KEY_E,
 }
 
+var controles_originais = {
+	"Esquerda": KEY_LEFT,
+	"Direita": KEY_RIGHT,
+	"Baixo": KEY_DOWN,
+	"Cima": KEY_UP,
+	"Pular": KEY_Z,
+	"Atacar": KEY_X,
+	"Interagir": KEY_E,
+}
 
 var volume_geral_indice = AudioServer.get_bus_index("Master") 
 var volume_musica_indice = AudioServer.get_bus_index("Musica")
@@ -45,6 +54,7 @@ var volume_efeitos_indice = AudioServer.get_bus_index("Efeitos")
 func _ready(): 
 	carregar_config_geral() 
 	aplicar_volumes()
+	aplicar_controles()
 
 func carregar_config_geral(): #método responsavel para verificar se o arquivo existe e carrega os valores atribuidos na classe opcoes.
 	if FileAccess.file_exists(CONFIGURACOES_CAMINHO_ARQUIVO): #verifica se o arquivo existe
@@ -78,7 +88,18 @@ func aplicar_volumes(): #aqui que a magica dos sons funciona
 	
 func aplicar_controles():
 	for controle in controles_padrao: #for das keys para controles 
-		var evento = InputEventKey.new()
-		evento.keycode = controles_padrao[controle]
-		InputMap.action_erase_events(controle)
-		InputMap.action_add_event(controle, evento)
+		var evento = InputEventKey.new() #cria um evento para cada key
+		evento.keycode = controles_padrao[controle] #coloca a tecla salva naquele evento
+		InputMap.action_erase_events(controle) #remove a tecla antiga 
+		InputMap.action_add_event(controle, evento) #e dps adiciona 
+
+func alterar_controle(controle, nova_tecla):
+	controles_padrao[controle] = nova_tecla
+	salvar_config()
+	aplicar_controles()
+
+func restaurar_controles_padrao():
+	for controle in controles_originais:
+		controles_padrao[controle] = controles_originais[controle]
+	salvar_config()
+	aplicar_controles()
