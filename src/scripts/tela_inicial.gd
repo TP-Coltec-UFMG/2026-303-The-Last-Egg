@@ -24,7 +24,7 @@ func _ready():
 	espaço.visible = true #se acabar aparece o texto do espaço
 	
 func _process(delta):
-	if Input.is_action_just_pressed("Pular"): #se eu pressionar pular, vai pular a intro
+	if Input.is_action_just_pressed("Interagir2"): #se eu pressionar pular, vai pular a intro
 		pular_intro()
 		
 	#código mt freestyle, basicamente eu coloco os sons nos frames	

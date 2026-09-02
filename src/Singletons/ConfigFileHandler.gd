@@ -26,6 +26,18 @@ var modo_daltonismo = 0
 #inicializa o modo alto contraste desligado
 var modo_altocontraste = false;
 
+#teclas padrão do jogo
+var controles_padrao = {
+	"Esquerda": KEY_LEFT,
+	"Direita": KEY_RIGHT,
+	"Baixo": KEY_DOWN,
+	"Cima": KEY_UP,
+	"Pular": KEY_Z,
+	"Atacar": KEY_X,
+	"Interagir": KEY_E,
+}
+
+
 var volume_geral_indice = AudioServer.get_bus_index("Master") 
 var volume_musica_indice = AudioServer.get_bus_index("Musica")
 var volume_efeitos_indice = AudioServer.get_bus_index("Efeitos")
@@ -42,16 +54,20 @@ func carregar_config_geral(): #método responsavel para verificar se o arquivo e
 		volume_efeitos = config.get_value("audio", "efeitos", volume_efeitos)
 		modo_daltonismo = config.get_value("acessibilidade","daltonismo", modo_daltonismo)
 		modo_altocontraste = config.get_value("acessibilidade","altocontraste", modo_altocontraste)
+		for controle in controles_padrao: #for das keys para controles 
+			controles_padrao[controle] = config.get_value("controles",controle,controles_padrao[controle]) #colocar a secção "controles" para o arquivo controle e depois vai guardar o valor
 
 	else: #se não existir, vai salvar como padrão do jogo
 		salvar_config()
 		
-func salvar_config(): #padrão do jogo
+func salvar_config(): #padrão do jogo 
 	config.set_value("audio", "geral", volume_geral) 
 	config.set_value("audio", "musica", volume_musica)
 	config.set_value("audio", "efeitos", volume_efeitos)
 	config.set_value("acessibilidade","daltonismo", modo_daltonismo)
 	config.set_value("acessibilidade","altocontraste", modo_altocontraste)
+	for controle in controles_padrao: #for das keys para controles 
+		config.set_value("controles",controle,controles_padrao[controle]) #vai pegar cada indice das keys e dps salva-las
 	config.save(CONFIGURACOES_CAMINHO_ARQUIVO) #no fim salva todas as configuraçãos padrões.
 
 func aplicar_volumes(): #aqui que a magica dos sons funciona 
@@ -59,3 +75,10 @@ func aplicar_volumes(): #aqui que a magica dos sons funciona
 	AudioServer.set_bus_volume_db(volume_geral_indice, linear_to_db(volume_geral))
 	AudioServer.set_bus_volume_db(volume_musica_indice, linear_to_db(volume_musica))
 	AudioServer.set_bus_volume_db(volume_efeitos_indice, linear_to_db(volume_efeitos))
+	
+func aplicar_controles():
+	for controle in controles_padrao: #for das keys para controles 
+		var evento = InputEventKey.new()
+		evento.keycode = controles_padrao[controle]
+		InputMap.action_erase_events(controle)
+		InputMap.action_add_event(controle, evento)

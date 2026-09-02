@@ -45,7 +45,6 @@ func _on_acessibilidade_botao_pressed():
 func _on_daltonismo_config_item_selected(indice: int):
 	ConfigFileHandler.modo_daltonismo = indice
 	ConfigFileHandler.salvar_config()
-	print("O Indice da opcao é: " + str(indice));
 	filtroglobal.aplicar_acessibilidade()
 
 
