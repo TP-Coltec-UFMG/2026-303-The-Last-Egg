@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://diwvrbanm5h42"]
+
+[ext_resource type="Script" uid="uid://cu0fy64nfb7a1" path="res://scripts/jogador.gd" id="1_06a7y"]
+[ext_resource type="Texture2D" uid="uid://tj22llbgh78y" path="res://sprites/sprites_Saaira(incompleto)/andarSaira-5755.png" id="2_06a7y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w41yl"]
+atlas = ExtResource("2_06a7y")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyx0c"]
+atlas = ExtResource("2_06a7y")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufweb"]
+atlas = ExtResource("2_06a7y")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqe4b"]
+atlas = ExtResource("2_06a7y")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j1qs"]
+atlas = ExtResource("2_06a7y")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmhka"]
+atlas = ExtResource("2_06a7y")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hvend"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w41yl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyx0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufweb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqe4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j1qs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmhka")
+}],
+"loop": 1,
+"name": &"andar",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(24, 22)
+
+[node name="Jogador" type="CharacterBody2D" unique_id=66226551]
+script = ExtResource("1_06a7y")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1450264039]
+sprite_frames = SubResource("SpriteFrames_hvend")
+animation = &"andar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=119218626]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_yf5fn")
