@@ -38,7 +38,7 @@ https://drive.google.com/file/d/1HMpi_7pj8v29ORU3cUP88R2J5b3mHz3P/view?usp=shari
 - Você pode acessar o nosso menu apertando o espaço.
 
 ## Menu Principal
-<img src="imgs/MenuPrincipal_TheLastEgg.png" alt="Logo">
+<img src="imgs/MenuPrincipal.png" alt="Logo">
 
  O menu principal apresenta três botões, cada um deles apresenta diferentes funcionalidades:</p>
 
