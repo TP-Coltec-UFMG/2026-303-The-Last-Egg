@@ -13,6 +13,8 @@
 
 O jogo "O último ovo" retrata a jornada do pássaro Falco, um ave de uma especíe chamada Saíra-apunhalada. Inicialmente, Falco vivia de maneira tranquila e segura cuidando de seus ovos, até que um dia, ao sobrevoar a floresta a procura de alimentos para seus filhotes ele acaba encontrando uma pena semelhante da sua especíe e decide descer ao local para procurar algum parceiro. Ao longo do jogo Falco irá enfrentar alguns predadores e interagir com aliados à fim de descobrir alguma pista e buscar comida para seus filhos, quem sabe o que ele irá encontrar nessa jornada...
 
+Ajude na preservação da sairá-apunhalada e outras espécies → https://reservakaetes.com.br/apadrinhamento/saira-apunhalada/
+
 ## Planilha de Acessibilidade
 [https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR_M4/edit?gid=107741830#gid=107741830](https://docs.google.com/spreadsheets/d/1XuxAyzaIyeWTHdETyp4iNFoG6s2PkvmLaqgAllg6Qu4/edit?usp=sharing)
 
@@ -76,6 +78,12 @@ Nas configurações do nosso jogo, até o momento, há controle de volume básic
 
 </div>
 
+## Créditos para sprites que foram adaptados para o jogo
+
+Pop Shop Packs → https://pop-shop-packs.itch.io/
+
+Admurin → https://admurin.itch.io/
+
 ## !! Avisos para modificação e/ou debug !!
 
 -Sempre importe pelo godot caso for usar o zip do nosso projeto!!!! Se você tentar importar manualmente não será reconhecido os arquivos .godot e o project.godot
@@ -85,5 +93,7 @@ Nas configurações do nosso jogo, até o momento, há controle de volume básic
 ## Slides
 
 Slides: https://canva.link/0gx7ckfm0sdpbou
+
+Slides: [https://www.canva.com/design/DAHUJ9efMRI/UBoxzeLN9RL76kSa8GAk7A/edit](https://canva.link/v2hcsw7xn92z0vz)
 
 
