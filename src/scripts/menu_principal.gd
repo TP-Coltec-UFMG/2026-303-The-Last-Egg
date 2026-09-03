@@ -1,12 +1,15 @@
 extends Node2D
 func _on_começar_pressed():
-	AudioManager.tocar_som_botao()
-	get_tree().change_scene_to_file("res://cenas/ninho.tscn") #muda a cena atual para outra cena carregada por arquivo
+	$"SomDoBotão".play()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://cenas/ninho.tscn")
 
 func _on_opções_pressed():
-	AudioManager.tocar_som_botao()
-	get_tree().change_scene_to_file("res://cenas/opções.tscn") #muda a cena atual para outra cena carregada por arquivo
+	$"SomDoBotão".play()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://cenas/opções.tscn")
 
 func _on_sair_pressed():
-	AudioManager.tocar_som_botao()
-	get_tree().quit() #faça com que o jogo sai.
+	$"SomDoBotão".play()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().quit()

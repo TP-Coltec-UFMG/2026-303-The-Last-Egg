@@ -52,6 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://bcreqk0qa7dii" path="res://sprites/sprites_ovo/tile042.png" id="50_vvb24"]
 [ext_resource type="Texture2D" uid="uid://bbs5hncrq64fc" path="res://sprites/sprites_ovo/tile043.png" id="51_pkthn"]
 [ext_resource type="Texture2D" uid="uid://bi25owssaxtdu" path="res://sprites/sprites_ovo/tile044.png" id="52_ydtlm"]
+[ext_resource type="AudioStream" uid="uid://cpt48lk3yqaqx" path="res://SFX/som_do_botão.mp3" id="53_3l3mh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsqm0"]
 texture = ExtResource("2_sbn3v")
@@ -221,19 +222,26 @@ horizontal_alignment = 1
 
 [node name="Musicaintro" type="AudioStreamPlayer" parent="." unique_id=1311277259]
 stream = ExtResource("4_w63eu")
+bus = &"Musica"
 
 [node name="EfeitoNinho" type="AudioStreamPlayer" parent="." unique_id=1273823375]
 stream = ExtResource("5_ek0m7")
+bus = &"Efeitos"
 
 [node name="EfeitoOvo" type="AudioStreamPlayer" parent="." unique_id=1973283277]
 stream = ExtResource("6_hftsj")
+bus = &"Efeitos"
 
 [node name="Whoosh" type="AudioStreamPlayer" parent="." unique_id=242687075]
 stream = ExtResource("7_hftsj")
+bus = &"Efeitos"
 
 [node name="Animação_Tela_Inicial" type="AnimatedSprite2D" parent="." unique_id=1183135864]
-position = Vector2(588.00006, 308)
-scale = Vector2(2.2096353, 2.597957)
+position = Vector2(581, 339)
+scale = Vector2(2.0683594, 2.4384015)
 sprite_frames = SubResource("SpriteFrames_b0vyf")
 animation = &"intro"
-frame_progress = 0.30436844
+frame_progress = 0.40280718
+
+[node name="SomDoBotão" type="AudioStreamPlayer" parent="." unique_id=1595687138]
+stream = ExtResource("53_3l3mh")

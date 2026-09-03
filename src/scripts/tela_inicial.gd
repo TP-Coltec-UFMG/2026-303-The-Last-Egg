@@ -49,4 +49,6 @@ func _process(delta):
 		efeito_whoosh_tocado = true
 
 func pular_intro():
+	$"SomDoBotão".play()
+	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://cenas/menu_principal.tscn") #vai para outra cena.
