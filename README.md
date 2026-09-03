@@ -16,6 +16,10 @@ O jogo "O último ovo" retrata a jornada do pássaro Falco, um ave de uma espec�
 ## Planilha de Acessibilidade
 [https://docs.google.com/spreadsheets/d/1hMr2mcNMs9up31D6zCn5308dHRLsqw0JQCNbnnlR_M4/edit?gid=107741830#gid=107741830](https://docs.google.com/spreadsheets/d/1XuxAyzaIyeWTHdETyp4iNFoG6s2PkvmLaqgAllg6Qu4/edit?usp=sharing)
 
+## Artigo SBGames 2026
+
+https://drive.google.com/file/d/1HMpi_7pj8v29ORU3cUP88R2J5b3mHz3P/view?usp=sharing
+
 ## Tecnologias
 - Godot Engine (4.5 Stable)
 
@@ -23,7 +27,7 @@ O jogo "O último ovo" retrata a jornada do pássaro Falco, um ave de uma espec�
 - Godot Engine (4.5 Stable)
   
 ## Ferramentas de Desenvolvimento
-- Aseprite (para criação de sprites e animações)
+- Aseprite e Resprite (para criação de sprites e animações)
 
 ## Tela Inicial 
 <img src="imgs/TelaInicial_TheLastEgg.png" alt="Logo">
