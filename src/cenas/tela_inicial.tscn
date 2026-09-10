@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://cuom4xqnlyly2"]
+[gd_scene format=3 uid="uid://cuom4xqnlyly2"]
 
 [ext_resource type="Script" uid="uid://b8yyom18mkfdl" path="res://scripts/tela_inicial.gd" id="1_g50o1"]
 [ext_resource type="Texture2D" uid="uid://bmfe1ja14dsa5" path="res://background/background_teste.jpg" id="2_sbn3v"]
@@ -195,21 +195,21 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("52_ydtlm")
 }],
-"loop": true,
+"loop": 1,
 "name": &"intro",
 "speed": 8.0
 }]
 
-[node name="Tela_Inicial" type="Node2D"]
+[node name="Tela_Inicial" type="Node2D" unique_id=1562847630]
 script = ExtResource("1_g50o1")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=442515583]
 offset_top = 3.0
 offset_right = 1151.0
 offset_bottom = 651.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsqm0")
 
-[node name="Espaço_Começar" type="Label" parent="."]
+[node name="Espaço_Começar" type="Label" parent="." unique_id=931445500]
 offset_left = 105.0
 offset_top = 549.0
 offset_right = 1059.0
@@ -219,23 +219,24 @@ theme_override_font_sizes/font_size = 55
 text = "PRESSIONE ESPAÇO PARA COMEÇAR"
 horizontal_alignment = 1
 
-[node name="Musicaintro" type="AudioStreamPlayer" parent="."]
+[node name="Musicaintro" type="AudioStreamPlayer" parent="." unique_id=1859461180]
 stream = ExtResource("4_w63eu")
 bus = &"Musica"
 
-[node name="EfeitoNinho" type="AudioStreamPlayer" parent="."]
+[node name="EfeitoNinho" type="AudioStreamPlayer" parent="." unique_id=171586211]
 stream = ExtResource("5_ek0m7")
 bus = &"Efeitos"
 
-[node name="EfeitoOvo" type="AudioStreamPlayer" parent="."]
+[node name="EfeitoOvo" type="AudioStreamPlayer" parent="." unique_id=1898769576]
 stream = ExtResource("6_hftsj")
 bus = &"Efeitos"
 
-[node name="Whoosh" type="AudioStreamPlayer" parent="."]
+[node name="Whoosh" type="AudioStreamPlayer" parent="." unique_id=226862623]
 stream = ExtResource("7_hftsj")
 bus = &"Efeitos"
 
-[node name="Animação_Tela_Inicial" type="AnimatedSprite2D" parent="."]
+[node name="Animação_Tela_Inicial" type="AnimatedSprite2D" parent="." unique_id=1637357113]
+texture_filter = 3
 position = Vector2(588.00006, 308)
 scale = Vector2(2.2096353, 2.597957)
 sprite_frames = SubResource("SpriteFrames_b0vyf")
