@@ -95,8 +95,6 @@ Todos os controles podem ser remapeados nessa parte das configurações.
 
 <img src="imgs/Bee_Walk (1).png" alt="Animação Uruçu-capixaba" width="500">
 
-# Sapinho pingo-de-ouro (Npc)
-
 </div>
 
 ## Créditos para sprites que foram adaptados para o jogo
