@@ -82,11 +82,11 @@ Todos os controles podem ser remapeados nessa parte das configurações.
 
 <img src="imgs/andar.jpeg" alt="Animação de Andar" width="500">
 
-# **Animação de voar (Sairá-apunhalada)**
+# **Animação Ocioso (Sairá-apunhalada)**
 
 <img src="imgs/idle.jpeg" alt="Animação Ocioso" width="500">
 
-# **Animação Ocioso (Sairá-apunhalada)**
+# **Animação de atacar (Sairá-apunhalada)**
 
 <img src="imgs/Ataque.jpeg" alt="Animação de Atacar" width="500">
 
