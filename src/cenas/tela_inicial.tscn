@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cuom4xqnlyly2"]
+[gd_scene load_steps=55 format=3 uid="uid://cuom4xqnlyly2"]
 
 [ext_resource type="Script" uid="uid://b8yyom18mkfdl" path="res://scripts/tela_inicial.gd" id="1_g50o1"]
 [ext_resource type="Texture2D" uid="uid://bmfe1ja14dsa5" path="res://background/background_teste.jpg" id="2_sbn3v"]
@@ -52,7 +52,6 @@
 [ext_resource type="Texture2D" uid="uid://bcreqk0qa7dii" path="res://sprites/sprites_ovo/tile042.png" id="50_vvb24"]
 [ext_resource type="Texture2D" uid="uid://bbs5hncrq64fc" path="res://sprites/sprites_ovo/tile043.png" id="51_pkthn"]
 [ext_resource type="Texture2D" uid="uid://bi25owssaxtdu" path="res://sprites/sprites_ovo/tile044.png" id="52_ydtlm"]
-[ext_resource type="AudioStream" uid="uid://cpt48lk3yqaqx" path="res://SFX/som_do_botão.mp3" id="53_3l3mh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsqm0"]
 texture = ExtResource("2_sbn3v")
@@ -196,21 +195,21 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("52_ydtlm")
 }],
-"loop": 1,
+"loop": true,
 "name": &"intro",
 "speed": 8.0
 }]
 
-[node name="Tela_Inicial" type="Node2D" unique_id=1202314882]
+[node name="Tela_Inicial" type="Node2D"]
 script = ExtResource("1_g50o1")
 
-[node name="Panel" type="Panel" parent="." unique_id=1409378052]
+[node name="Panel" type="Panel" parent="."]
 offset_top = 3.0
 offset_right = 1151.0
 offset_bottom = 651.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsqm0")
 
-[node name="Espaço_Começar" type="Label" parent="." unique_id=2007668990]
+[node name="Espaço_Começar" type="Label" parent="."]
 offset_left = 105.0
 offset_top = 549.0
 offset_right = 1059.0
@@ -220,28 +219,25 @@ theme_override_font_sizes/font_size = 55
 text = "PRESSIONE ESPAÇO PARA COMEÇAR"
 horizontal_alignment = 1
 
-[node name="Musicaintro" type="AudioStreamPlayer" parent="." unique_id=1311277259]
+[node name="Musicaintro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_w63eu")
 bus = &"Musica"
 
-[node name="EfeitoNinho" type="AudioStreamPlayer" parent="." unique_id=1273823375]
+[node name="EfeitoNinho" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ek0m7")
 bus = &"Efeitos"
 
-[node name="EfeitoOvo" type="AudioStreamPlayer" parent="." unique_id=1973283277]
+[node name="EfeitoOvo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_hftsj")
 bus = &"Efeitos"
 
-[node name="Whoosh" type="AudioStreamPlayer" parent="." unique_id=242687075]
+[node name="Whoosh" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_hftsj")
 bus = &"Efeitos"
 
-[node name="Animação_Tela_Inicial" type="AnimatedSprite2D" parent="." unique_id=1183135864]
-position = Vector2(581, 339)
-scale = Vector2(2.0683594, 2.4384015)
+[node name="Animação_Tela_Inicial" type="AnimatedSprite2D" parent="."]
+position = Vector2(588.00006, 308)
+scale = Vector2(2.2096353, 2.597957)
 sprite_frames = SubResource("SpriteFrames_b0vyf")
 animation = &"intro"
-frame_progress = 0.40280718
-
-[node name="SomDoBotão" type="AudioStreamPlayer" parent="." unique_id=1595687138]
-stream = ExtResource("53_3l3mh")
+frame_progress = 0.30436844

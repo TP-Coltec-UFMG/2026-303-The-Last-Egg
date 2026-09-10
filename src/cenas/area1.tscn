@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://c67y5ffbdhke7"]
+
+[ext_resource type="Texture2D" uid="uid://7aty4bp6joon" path="res://sprites/fundos/pngtree-forest-landscape-horizontal-seamless-background-for-games-apps-picture-image_1800420.jpg" id="1_iq3h8"]
+[ext_resource type="Script" uid="uid://jodq81cqhepg" path="res://scripts/volta_ninho.gd" id="3_0gqr5"]
+[ext_resource type="PackedScene" uid="uid://ck6d4jxai41pl" path="res://cenas/inimigo.tscn" id="4_inimigo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(20, 361)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(20, 396)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(1152, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(1152, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
+size = Vector2(20, 202)
+
+[node name="Area1" type="Node2D" unique_id=1889903994]
+
+[node name="Fundo" type="Node2D" parent="." unique_id=1164893436]
+
+[node name="Sprite2D" type="Sprite2D" parent="Fundo" unique_id=1799752516]
+position = Vector2(576.00006, 324)
+scale = Vector2(0.96000004, 0.89875174)
+texture = ExtResource("1_iq3h8")
+
+[node name="Paredes" type="Node2D" parent="." unique_id=927283898]
+
+[node name="Esquerda" type="StaticBody2D" parent="Paredes" unique_id=761374783]
+position = Vector2(10, 223)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Esquerda" unique_id=1584770987]
+position = Vector2(0, -27.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Direita" type="StaticBody2D" parent="Paredes" unique_id=1864769309]
+position = Vector2(1142, 265)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Direita" unique_id=372353682]
+position = Vector2(0, -53)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Chao" type="StaticBody2D" parent="Paredes" unique_id=118301081]
+position = Vector2(605, 589)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao" unique_id=1058748869]
+position = Vector2(-29, 0)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="Teto" type="StaticBody2D" parent="Paredes" unique_id=1574535412]
+position = Vector2(563, 10)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Teto" unique_id=1787066924]
+position = Vector2(13, -3)
+shape = SubResource("RectangleShape2D_d0u6y")
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=1113297807]
+position = Vector2(1075, 541)
+
+[node name="Inimigo" parent="." unique_id=294083897 instance=ExtResource("4_inimigo")]
+position = Vector2(754, 556)
+
+[node name="VoltaNinho" type="Area2D" parent="." unique_id=1612364333]
+position = Vector2(1142, 478)
+script = ExtResource("3_0gqr5")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VoltaNinho" unique_id=1584355548]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_3gngh")
+
+[node name="Label" type="Label" parent="." unique_id=1817513754]
+offset_left = 912.0
+offset_top = 372.0
+offset_right = 1093.0
+offset_bottom = 395.0
+text = "Volte para o ninho aqui"
+
+[node name="Label2" type="Label" parent="." unique_id=1921904487]
+offset_left = 453.0
+offset_top = 245.0
+offset_right = 751.0
+offset_bottom = 287.0
+theme_override_font_sizes/font_size = 30
+text = "Aperte X para atacar"

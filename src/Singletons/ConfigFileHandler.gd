@@ -37,7 +37,7 @@ var controles_padrao = {
 	"Interagir": KEY_E,
 }
 
-var controles_originais = {
+const controles_originais = {
 	"Esquerda": KEY_LEFT,
 	"Direita": KEY_RIGHT,
 	"Baixo": KEY_DOWN,

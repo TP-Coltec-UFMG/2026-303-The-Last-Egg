@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://dj3ql0wprwjct"]
+[gd_scene load_steps=4 format=3 uid="uid://dj3ql0wprwjct"]
 
 [ext_resource type="Script" uid="uid://dyqc4jj8flu0u" path="res://scripts/opções.gd" id="1_tdy4x"]
 [ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://fonte/GrapeSoda.ttf" id="2_4fjk0"]
 [ext_resource type="Texture2D" uid="uid://d3e6lhel3rrym" path="res://sprites/sprites_ovo/tile036.png" id="3_tdy4x"]
 
-[node name="opções" type="Control" unique_id=1179974954]
+[node name="opções" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tdy4x")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1659482818]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,49 +21,49 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1206352985]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1694469171]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4fjk0")
 theme_override_font_sizes/font_size = 55
 text = "OPÇÕES GERAIS"
 horizontal_alignment = 1
 
-[node name="Volume_Geral_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1664515548]
+[node name="Volume_Geral_Texto" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Volume Geral:"
 
-[node name="Volume_Geral_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=1601401531]
+[node name="Volume_Geral_Barra" type="HSlider" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 max_value = 1.0
 step = 0.01
 
-[node name="Volume_Musica_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=207940996]
+[node name="Volume_Musica_Texto" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Volume da Música:"
 
-[node name="Volume_Musica_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=1178940744]
+[node name="Volume_Musica_Barra" type="HSlider" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 max_value = 1.0
 step = 0.01
 
-[node name="Volume_Efeitos_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1181999048]
+[node name="Volume_Efeitos_Texto" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Volume de Efeitos:"
 
-[node name="Volume_Efeitos_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=652873480]
+[node name="Volume_Efeitos_Barra" type="HSlider" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 max_value = 1.0
 step = 0.01
 
-[node name="Daltonismo_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2077067443]
+[node name="Daltonismo_Texto" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Escolhe o tipo de daltonismo:"
 
-[node name="Daltonismo_Config" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=481839390]
+[node name="Daltonismo_Config" type="OptionButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 4
 popup/item_0/text = "Desligado"
@@ -75,14 +75,14 @@ popup/item_2/id = 2
 popup/item_3/text = "Tritanopia"
 popup/item_3/id = 3
 
-[node name="AltoContraste_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1484588007]
+[node name="AltoContraste_Texto" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Alto Contraste:"
 
-[node name="AltoContraste_CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=958037184]
+[node name="AltoContraste_CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Voltar_TelaInicial" type="Button" parent="." unique_id=1771652408]
+[node name="Voltar_TelaInicial" type="Button" parent="."]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 566.0
@@ -90,7 +90,7 @@ offset_right = 179.0
 offset_bottom = 620.0
 text = "voltar"
 
-[node name="Voltar_Abertura" type="Button" parent="." unique_id=1435838887]
+[node name="Voltar_Abertura" type="Button" parent="."]
 layout_mode = 0
 offset_left = 215.0
 offset_top = 566.0
@@ -99,7 +99,7 @@ offset_bottom = 620.0
 text = "voltar para intro
 "
 
-[node name="Acessibilidade_Botao" type="Button" parent="." unique_id=1192999245]
+[node name="Acessibilidade_Botao" type="Button" parent="."]
 layout_mode = 0
 offset_left = 391.0
 offset_top = 568.0
@@ -110,7 +110,7 @@ text = "ir para opções de controle
 
 "
 
-[node name="Tile036" type="Sprite2D" parent="." unique_id=1711637826]
+[node name="Tile036" type="Sprite2D" parent="."]
 position = Vector2(922.5, 509.5)
 scale = Vector2(1.0286459, 1.2259616)
 texture = ExtResource("3_tdy4x")

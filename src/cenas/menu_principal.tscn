@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c3lg6kd2sipjk"]
+[gd_scene load_steps=8 format=3 uid="uid://c3lg6kd2sipjk"]
 
 [ext_resource type="Script" uid="uid://dq8pw2t8puw8k" path="res://scripts/menu_principal.gd" id="1_ul6ys"]
 [ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://fonte/GrapeSoda.ttf" id="2_gmcsc"]
@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cehg8xg442kog" path="res://menu/Menu_configuracoes.png" id="5_b574n"]
 [ext_resource type="Texture2D" uid="uid://dpu15dbfymkdy" path="res://menu/Menu_sairDoJogo.png" id="6_611wp"]
 
-[node name="Menu" type="Node2D" unique_id=1449504526]
+[node name="Menu" type="Node2D"]
 script = ExtResource("1_ul6ys")
 
-[node name="Button_manager" type="Control" parent="." unique_id=1641368242]
+[node name="Button_manager" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,12 +21,12 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="background_menu" type="Sprite2D" parent="Button_manager" unique_id=1469088235]
+[node name="background_menu" type="Sprite2D" parent="Button_manager"]
 position = Vector2(553.5, 324.49997)
 scale = Vector2(0.8073825, 0.9161931)
 texture = ExtResource("2_ns3he")
 
-[node name="Titulo" type="Label" parent="Button_manager" unique_id=932125341]
+[node name="Titulo" type="Label" parent="Button_manager"]
 layout_mode = 0
 offset_left = 725.0
 offset_top = 12.0
@@ -40,7 +40,7 @@ text = "O último ovo"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Começar" type="TextureButton" parent="Button_manager" unique_id=1042718926]
+[node name="Começar" type="TextureButton" parent="Button_manager"]
 layout_mode = 0
 offset_left = 778.0
 offset_top = 164.0
@@ -49,7 +49,7 @@ offset_bottom = 220.0
 size_flags_vertical = 3
 texture_normal = ExtResource("4_yxm4i")
 
-[node name="Opções" type="TextureButton" parent="Button_manager" unique_id=1075470249]
+[node name="Opções" type="TextureButton" parent="Button_manager"]
 layout_mode = 0
 offset_left = 776.0
 offset_top = 280.0
@@ -58,7 +58,7 @@ offset_bottom = 430.0
 size_flags_vertical = 3
 texture_normal = ExtResource("5_b574n")
 
-[node name="Sair" type="TextureButton" parent="Button_manager" unique_id=2071456214]
+[node name="Sair" type="TextureButton" parent="Button_manager"]
 layout_mode = 0
 offset_left = 780.0
 offset_top = 425.0
@@ -67,7 +67,7 @@ offset_bottom = 575.0
 size_flags_vertical = 3
 texture_normal = ExtResource("6_611wp")
 
-[node name="SomDoBotão" type="AudioStreamPlayer" parent="." unique_id=686707138]
+[node name="SomDoBotão" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ns3he")
 bus = &"Efeitos"
 

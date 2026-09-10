@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dsxx05aoqqkyk"]
+
+[ext_resource type="Script" uid="uid://ttj8hfc3ljo6" path="res://scripts/npc.gd" id="1_mhefn"]
+[ext_resource type="Texture2D" uid="uid://mtpnss1tijc4" path="res://sprites/npc_ave_amarela/spritesheet_cedar waxwing.png" id="2_xjoyb"]
+[ext_resource type="AudioStream" uid="uid://bjhnmdpkgaiqw" path="res://SFX/Grito_Emanuel.mp3" id="3_ghko4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghko4"]
+atlas = ExtResource("2_xjoyb")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lay2q"]
+atlas = ExtResource("2_xjoyb")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2n3ot"]
+atlas = ExtResource("2_xjoyb")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avoyn"]
+atlas = ExtResource("2_xjoyb")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghko4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lay2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2n3ot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avoyn")
+}],
+"loop": 1,
+"name": &"parado",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktgr7"]
+size = Vector2(242.77502, 176.70625)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jnjht"]
+radius = 260.12305
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=290666181]
+scale = Vector2(0.2141901, 0.2141901)
+script = ExtResource("1_mhefn")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1892148336]
+texture_filter = 1
+scale = Vector2(23.279278, 19.19431)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"parado"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1929660483]
+position = Vector2(-14.006242, -0.3531296)
+scale = Vector2(1.617524, 1.617524)
+shape = SubResource("RectangleShape2D_ktgr7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=537419653]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=525098720]
+scale = Vector2(2.3953886, 2.3953886)
+shape = SubResource("CircleShape2D_jnjht")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1662857736]
+
+[node name="PanelDialogo" type="PanelContainer" parent="CanvasLayer" unique_id=138468564]
+offset_left = 721.0
+offset_top = 364.0
+offset_right = 1121.0
+offset_bottom = 404.0
+metadata/_edit_group_ = true
+
+[node name="LabelDialogo" type="Label" parent="CanvasLayer/PanelDialogo" unique_id=264770373]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="Grito_Emanuel" type="AudioStreamPlayer2D" parent="." unique_id=2128511774]
+stream = ExtResource("3_ghko4")
+bus = &"Efeitos"

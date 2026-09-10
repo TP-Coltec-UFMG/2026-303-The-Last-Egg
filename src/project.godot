@@ -23,7 +23,6 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 ConfigFileHandler="*res://Singletons/ConfigFileHandler.gd"
 filtroglobal="*res://cenas/filtroglobal.tscn"
 GameManager="*uid://cc3dmiquhcoeh"
-AudioManager="*uid://b2gwyxu2wm6sq"
 
 [input]
 
