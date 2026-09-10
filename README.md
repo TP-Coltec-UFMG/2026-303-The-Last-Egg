@@ -52,13 +52,22 @@ https://drive.google.com/file/d/1HMpi_7pj8v29ORU3cUP88R2J5b3mHz3P/view?usp=shari
 ## Configurações
 <img src="imgs/Configurações_TheLastEgg.png" alt="Logo">
 
-Nas configurações do nosso jogo, até o momento, há controle de volume básico (geral, música e efeitos sonoros). Atualmente, temos duas acessibilidades disponíveis: daltonismo e modo de alto contraste. Os tipos de daltonismo disponíveis são Protanopia, Deuteranopia e Tritanopia. No modo de alto contraste, todas as cores são realçadas para oferecer acessibilidade àqueles que têm baixa acuidade visual. No futuro, planejamos mudar toda a interface do usuário e também implementar o remapeamento de controles. Todas as alterações e/ou modificações nas configurações são salvadas e aplicadas ;-]
+Nas configurações do nosso jogo, até o momento, há controle de volume básico (geral, música e efeitos sonoros). Atualmente, temos duas acessibilidades disponíveis: daltonismo e modo de alto contraste. Os tipos de daltonismo disponíveis são Protanopia, Deuteranopia e Tritanopia. No modo de alto contraste, todas as cores são realçadas para oferecer acessibilidade àqueles que têm baixa acuidade visual.Todas as alterações e/ou modificações nas configurações são salvadas e aplicadas ;-]
+
+## Remapeamento de controles
+
+<img src="imgs/Configurar_controles.png" alt="Logo">
+
+Todos os controles podem ser remapeados nessa parte das configurações.
 
 ## Primeira Cena
-<img src="imgs/PrimeiraCena_TheLastEgg.png" alt="Ninho">
+<img src="imgs/Primeira_Cena.png" alt="Ninho">
 
 - Inicialmente temos um placeholder de um cenário para o ninho e o protagonista, o passáro atualmente só consegue andar e pular pelo ninho, entretanto futuramente será adicionado novas mecânicas como um pequeno voo e ataques.
 
+## Mais Cenas
+
+<img src="imgs/Cena Tucano.png" alt="Cena">
 
 ## GDC (Game Design Canvas)
 
@@ -68,13 +77,29 @@ Nas configurações do nosso jogo, até o momento, há controle de volume básic
 
 
 <div align="center">
-<img src="imgs/andarSaira-5755 (1).png" alt="Animação de Andar" width="500">
+<img src="imgs/andar.jpeg" alt="Animação de Andar" width="500">
   
 # **Animação de andar (Sairá-apunhalada)**
 
 <img src="imgs/voouSaira-574e (1).png" alt="Animação de Voar" width="500">
 
 # **Animação de voar (Sairá-apunhalada)**
+
+<img src="imgs/idle.jpeg" alt="Animação Ocioso" width="500">
+
+# **Animação Ocioso (Sairá-apunhalada)**
+
+<img src="imgs/Ataque.jpeg" alt="Animação de Atacar" width="500">
+
+# **Animação de Atacar (Sairá-apunhalada)**
+
+<img src="imgs/Bee_Walk (1).png" alt="Animação Uruçu-capixaba" width="500">
+
+# Uruçu-capixaba (Npc)
+
+<img src="imgs/frog_green_spritesheet (1)-f1a3 (1) (1).png" alt="Animação Sapinho pingo-de-ouro" width="500">
+
+# Sapinho pingo-de-ouro (Npc)
 
 </div>
 
@@ -90,7 +115,7 @@ Ansimuz → https://ansimuz.itch.io/
 
 -Sempre importe pelo godot caso for usar o zip do nosso projeto!!!! Se você tentar importar manualmente não será reconhecido os arquivos .godot e o project.godot
 
--Caso não conseguir executar mesmo seguindo esses passos,por favor me contata:a2023951334@teiacoltec.org.
+-Caso não conseguir executar mesmo seguindo esses passos,por favor me contate:a2023951334@teiacoltec.org.
   
 ## Slides
 
