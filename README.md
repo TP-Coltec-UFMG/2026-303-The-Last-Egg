@@ -95,10 +95,6 @@ Todos os controles podem ser remapeados nessa parte das configurações.
 
 <img src="imgs/Bee_Walk (1).png" alt="Animação Uruçu-capixaba" width="500">
 
-# Uruçu-capixaba (Npc)
-
-<img src="imgs/frog_green_spritesheet (1)-f1a3 (1) (1).png" alt="Animação Sapinho pingo-de-ouro" width="500">
-
 # Sapinho pingo-de-ouro (Npc)
 
 </div>
