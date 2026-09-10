@@ -77,11 +77,10 @@ Todos os controles podem ser remapeados nessa parte das configurações.
 
 
 <div align="center">
-<img src="imgs/andar.jpeg" alt="Animação de Andar" width="500">
-  
+
 # **Animação de andar (Sairá-apunhalada)**
 
-<img src="imgs/voouSaira-574e (1).png" alt="Animação de Voar" width="500">
+<img src="imgs/andar.jpeg" alt="Animação de Andar" width="500">
 
 # **Animação de voar (Sairá-apunhalada)**
 
@@ -90,10 +89,6 @@ Todos os controles podem ser remapeados nessa parte das configurações.
 # **Animação Ocioso (Sairá-apunhalada)**
 
 <img src="imgs/Ataque.jpeg" alt="Animação de Atacar" width="500">
-
-# **Animação de Atacar (Sairá-apunhalada)**
-
-<img src="imgs/Bee_Walk (1).png" alt="Animação Uruçu-capixaba" width="500">
 
 </div>
 
