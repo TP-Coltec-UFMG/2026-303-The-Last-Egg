@@ -1,184 +1,138 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc64gs6wttiyj"]
+[gd_scene format=3 uid="uid://dc64gs6wttiyj"]
 
-[ext_resource type="Script" uid="uid://loa2puvl8wc0" path="res://scripts/opções_controles.gd" id="1_cl7b0"]
+[ext_resource type="Script" uid="uid://dyqc4jj8flu0u" path="res://scripts/opções.gd" id="1_7uat8"]
 [ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://fonte/GrapeSoda.ttf" id="2_lg72o"]
+[ext_resource type="Texture2D" uid="uid://d3e6lhel3rrym" path="res://sprites/sprites_ovo/tile036.png" id="3_8ku8j"]
 
-[node name="opções" type="Control"]
+[node name="opções" type="Control" unique_id=411226169]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_cl7b0")
+script = ExtResource("1_7uat8")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -122.0
-offset_right = 122.0
-offset_bottom = 64.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 64
-text = "Controles"
-horizontal_alignment = 1
-
-[node name="Voltar_TelaInicial" type="Button" parent="."]
-layout_mode = 0
-offset_left = 421.0
-offset_top = 536.0
-offset_right = 582.0
-offset_bottom = 590.0
-text = "voltar"
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=549069668]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 194.0
+offset_top = 35.0
+offset_right = -232.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 90
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 50
 
-[node name="Controles" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1241510363]
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 2
+theme_override_constants/separation = 12
 
-[node name="Label" type="Label" parent="MarginContainer/Controles"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1727505394]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 45
-text = "Movimentos"
+theme_override_font_sizes/font_size = 55
+text = "OPÇÕES GERAIS"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/Controles"]
+[node name="Volume_Geral_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1746808549]
+layout_mode = 2
+text = "Volume Geral:"
+
+[node name="Volume_Geral_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=218309290]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="Volume_Musica_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=336794910]
+layout_mode = 2
+text = "Volume da Música:"
+
+[node name="Volume_Musica_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=797589632]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="Volume_Efeitos_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1261014263]
+layout_mode = 2
+text = "Volume de Efeitos:"
+
+[node name="Volume_Efeitos_Barra" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=1934305737]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="Daltonismo_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=419687434]
+layout_mode = 2
+text = "Escolhe o tipo de daltonismo:"
+
+[node name="Daltonismo_Config" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=1094277687]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Desligado"
+popup/item_0/id = 0
+popup/item_1/text = "Protanopia "
+popup/item_1/id = 1
+popup/item_2/text = "Deuteranopia"
+popup/item_2/id = 2
+popup/item_3/text = "Tritanopia"
+popup/item_3/id = 3
+
+[node name="AltoContraste_Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2034781529]
+layout_mode = 2
+text = "Alto Contraste:"
+
+[node name="AltoContraste_CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=1605004884]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Controles"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 33
-text = "Esquerda"
-
-[node name="Esquerda" type="Button" parent="MarginContainer/Controles/HBoxContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Controles"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 33
-text = "Direita"
-
-[node name="Direita" type="Button" parent="MarginContainer/Controles/HBoxContainer2"]
-layout_mode = 2
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/Controles"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer3"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 33
-text = "Baixo"
-
-[node name="Baixo" type="Button" parent="MarginContainer/Controles/HBoxContainer3"]
-layout_mode = 2
-
-[node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/Controles"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer7"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 33
-text = "Cima"
-
-[node name="Cima" type="Button" parent="MarginContainer/Controles/HBoxContainer7"]
-layout_mode = 2
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/Controles"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer4"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 33
-text = "Pular"
-
-[node name="Pular" type="Button" parent="MarginContainer/Controles/HBoxContainer4"]
-layout_mode = 2
-
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/Controles"]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="MarginContainer/Controles"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 45
-text = "Ações"
-horizontal_alignment = 1
-
-[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/Controles"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer6"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 33
-text = "Interagir"
-
-[node name="Interagir" type="Button" parent="MarginContainer/Controles/HBoxContainer6"]
-layout_mode = 2
-
-[node name="HBoxContainer8" type="HBoxContainer" parent="MarginContainer/Controles"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer8"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("2_lg72o")
-theme_override_font_sizes/font_size = 33
-text = "Atacar"
-
-[node name="Atacar" type="Button" parent="MarginContainer/Controles/HBoxContainer8"]
-layout_mode = 2
-
-[node name="restaurar" type="Button" parent="."]
+[node name="Voltar_TelaInicial" type="Button" parent="." unique_id=4379397]
 layout_mode = 0
-offset_left = 616.0
-offset_top = 539.0
-offset_right = 777.0
-offset_bottom = 593.0
-text = "Restaurar padrão"
+offset_left = 193.0
+offset_top = 466.0
+offset_right = 354.0
+offset_bottom = 520.0
+text = "voltar"
 
+[node name="Voltar_Abertura" type="Button" parent="." unique_id=156746903]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 468.0
+offset_right = 555.0
+offset_bottom = 522.0
+text = "voltar para intro
+"
+
+[node name="Acessibilidade_Botao" type="Button" parent="." unique_id=910888736]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 467.0
+offset_right = 801.0
+offset_bottom = 521.0
+text = "ir para opções de controle
+
+
+"
+
+[node name="Tile036" type="Sprite2D" parent="." unique_id=2134298878]
+position = Vector2(1014, 544)
+scale = Vector2(1.0286459, 1.2259616)
+texture = ExtResource("3_8ku8j")
+
+[connection signal="changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_geral_barra_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_geral_barra_value_changed"]
+[connection signal="changed" from="MarginContainer/VBoxContainer/Volume_Musica_Barra" to="." method="_on_volume_musica_barra_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Musica_Barra" to="." method="_on_volume_musica_barra_value_changed"]
+[connection signal="changed" from="MarginContainer/VBoxContainer/Volume_Efeitos_Barra" to="." method="_on_volume_efeitos_barra_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Efeitos_Barra" to="." method="_on_volume_efeitos_barra_value_changed"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/Daltonismo_Config" to="." method="_on_daltonismo_config_item_selected"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/AltoContraste_CheckBox" to="." method="_on_alto_contraste_check_box_toggled"]
 [connection signal="pressed" from="Voltar_TelaInicial" to="." method="_on_voltar_teste_pressed"]
 [connection signal="pressed" from="Voltar_TelaInicial" to="." method="_on_voltar_tela_inicial_pressed"]
-[connection signal="pressed" from="restaurar" to="." method="_on_restaurar_pressed"]
+[connection signal="pressed" from="Voltar_Abertura" to="." method="_on_voltar_teste_2_pressed"]
+[connection signal="pressed" from="Voltar_Abertura" to="." method="_on_voltar_abertura_pressed"]
+[connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_voltar_teste_3_pressed"]
+[connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_voltar_teste_2_pressed"]
+[connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_acessibilidade_botao_pressed"]

@@ -1,5 +1,7 @@
 extends Node
 
+signal controles_alterados
+
 const CAMINHO_TECLAS := "res://sprites/teclas_configuracoes/"
 
 #* Esse arquivo é um script singleton,
@@ -99,12 +101,14 @@ func alterar_controle(controle, nova_tecla):
 	controles_padrao[controle] = nova_tecla
 	salvar_config()
 	aplicar_controles()
+	controles_alterados.emit()
 
 func restaurar_controles_padrao():
 	for controle in controles_originais:
 		controles_padrao[controle] = controles_originais[controle]
 	salvar_config()
 	aplicar_controles()
+	controles_alterados.emit()
 
 func obter_icone_tecla(codigo_tecla: int) -> Texture2D:
 	var nome_arquivo: String = mapa_teclas().get(codigo_tecla, "")

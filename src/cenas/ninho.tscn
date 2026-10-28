@@ -118,7 +118,7 @@ anchor_right = 1.0
 offset_left = -618.0
 offset_top = 18.0
 offset_right = -18.0
-offset_bottom = 229.0
+offset_bottom = 254.0
 grow_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_controles")
 
@@ -127,6 +127,9 @@ custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 5
+
+[node name="AvisoControles" type="Label" parent="CanvasLayer/Painel/Conteudo"]
+text = "Para mudar os controles, aperte Esc"
 
 [node name="Titulo" type="Label" parent="CanvasLayer/Painel/Conteudo"]
 text = "CONTROLES"

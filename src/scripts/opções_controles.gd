@@ -1,5 +1,6 @@
 extends Control
 
+var modo_pausa := false
 var controle_selecionado = ""
 var aguardando_tecla = false
 var botoes_controle: Dictionary = {}
@@ -86,5 +87,9 @@ func _on_restaurar_pressed():
 	atualizar_botoes()
 	
 func _on_voltar_tela_inicial_pressed():
+	if modo_pausa:
+		GameManager.voltar_opcoes_pausa()
+		return
+
 	get_tree().change_scene_to_file("res://cenas/opções.tscn")
 	

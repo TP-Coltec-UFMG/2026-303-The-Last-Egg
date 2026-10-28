@@ -1,0 +1,183 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/opções_controles.gd" id="1_cl7b0"]
+[ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://fonte/GrapeSoda.ttf" id="2_lg72o"]
+
+[node name="ConfiguracaoControles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cl7b0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -122.0
+offset_right = 122.0
+offset_bottom = 64.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_lg72o")
+theme_override_font_sizes/font_size = 64
+text = "Controles"
+horizontal_alignment = 1
+
+[node name="Voltar_TelaInicial" type="Button" parent="."]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 536.0
+offset_right = 582.0
+offset_bottom = 590.0
+text = "voltar"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 90
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="Controles" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Controles"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lg72o")
+theme_override_font_sizes/font_size = 45
+text = "Movimentos"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Controles"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Controles"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_lg72o")
+theme_override_font_sizes/font_size = 33
+text = "Esquerda"
+
+[node name="Esquerda" type="Button" parent="MarginContainer/Controles/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Controles"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_lg72o")
+theme_override_font_sizes/font_size = 33
+text = "Direita"
+
+[node name="Direita" type="Button" parent="MarginContainer/Controles/HBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/Controles"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_lg72o")
+theme_override_font_sizes/font_size = 33
+text = "Baixo"
+
+[node name="Baixo" type="Button" parent="MarginContainer/Controles/HBoxContainer3"]
+layout_mode = 2
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/Controles"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_lg72o")
+theme_override_font_sizes/font_size = 33
+text = "Cima"
+
+[node name="Cima" type="Button" parent="MarginContainer/Controles/HBoxContainer7"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/Controles"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_lg72o")
+theme_override_font_sizes/font_size = 33
+text = "Pular"
+
+[node name="Pular" type="Button" parent="MarginContainer/Controles/HBoxContainer4"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/Controles"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/Controles"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lg72o")
+theme_override_font_sizes/font_size = 45
+text = "Ações"
+horizontal_alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/Controles"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_lg72o")
+theme_override_font_sizes/font_size = 33
+text = "Interagir"
+
+[node name="Interagir" type="Button" parent="MarginContainer/Controles/HBoxContainer6"]
+layout_mode = 2
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="MarginContainer/Controles"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/Controles/HBoxContainer8"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_lg72o")
+theme_override_font_sizes/font_size = 33
+text = "Atacar"
+
+[node name="Atacar" type="Button" parent="MarginContainer/Controles/HBoxContainer8"]
+layout_mode = 2
+
+[node name="restaurar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 616.0
+offset_top = 539.0
+offset_right = 777.0
+offset_bottom = 593.0
+text = "Restaurar padrão"
+
+[connection signal="pressed" from="Voltar_TelaInicial" to="." method="_on_voltar_tela_inicial_pressed"]
+[connection signal="pressed" from="restaurar" to="." method="_on_restaurar_pressed"]

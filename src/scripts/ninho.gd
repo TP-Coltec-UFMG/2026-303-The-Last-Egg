@@ -1,8 +1,12 @@
 extends Node2D
 
 @onready var lista_controles: VBoxContainer = $CanvasLayer/Painel/Conteudo/Lista
+@onready var aviso_controles: Label = $CanvasLayer/Painel/Conteudo/AvisoControles
 
 func _ready() -> void:
+	ConfigFileHandler.controles_alterados.connect(atualizar_lista_controles)
+	get_tree().create_timer(60.0).timeout.connect(_ocultar_aviso_controles)
+
 	# Se o jogador ainda não existe, cria a primeira instância
 	if GameManager.jogador == null:
 		GameManager.comida_coletada = false
@@ -19,6 +23,9 @@ func _ready() -> void:
 		pass
 
 	atualizar_lista_controles()
+
+func _ocultar_aviso_controles() -> void:
+	aviso_controles.hide()
 
 func atualizar_lista_controles() -> void:
 	var controles: Dictionary = ConfigFileHandler.controles_padrao
