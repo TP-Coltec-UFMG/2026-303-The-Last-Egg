@@ -14,12 +14,23 @@ func _on_sair_pressed():
 	await get_tree().create_timer(0.5).timeout
 	get_tree().quit() #faça com que o jogo sai.
 
+func _on_jogar_label_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		_on_começar_pressed()
+
+func _on_opcoes_label_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		_on_opções_pressed()
+
+func _on_sair_label_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		_on_sair_pressed()
+
 func _on_label_mouse_entered() -> void:
 	$"Button_manager/Começar/Label".modulate = Color.YELLOW
 
 func _on_label_mouse_exited() -> void:
 	$"Button_manager/Começar/Label".modulate = Color.WHITE
-
 
 func _on_label_opções_mouse_entered() -> void:
 	$"Button_manager/Opções/label_opções".modulate = Color.YELLOW

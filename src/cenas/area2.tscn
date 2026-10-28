@@ -1,0 +1,137 @@
+[gd_scene load_steps=15 format=3 uid="uid://bcspm7yuvaxuj"]
+
+[ext_resource type="Texture2D" uid="uid://ddfrud1xvy0lb" path="res://sprites/fundos/forest.png" id="1_fundo"]
+[ext_resource type="PackedScene" uid="uid://ck6d4jxai41pl" path="res://cenas/inimigo.tscn" id="2_inimigo"]
+[ext_resource type="Texture2D" uid="uid://6a66f12x488" path="res://sprites/hud/Vida_ovo.png" id="3_comida"]
+[ext_resource type="Script" uid="uid://c0ok6540kawtt" path="res://scripts/comida.gd" id="4_comida"]
+[ext_resource type="Script" uid="uid://b0blbr5s6joqp" path="res://scripts/retorno_ninho_comida.gd" id="5_retorno"]
+
+[sub_resource type="RectangleShape2D" id="Chao"]
+size = Vector2(503, 20)
+
+[sub_resource type="RectangleShape2D" id="Parede"]
+size = Vector2(20, 648)
+
+[sub_resource type="CircleShape2D" id="Comida"]
+radius = 42.0
+
+[sub_resource type="RectangleShape2D" id="Retorno"]
+size = Vector2(24, 180)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jk4l"]
+size = Vector2(212, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih0lv"]
+size = Vector2(182, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15khk"]
+size = Vector2(100, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lh2e"]
+size = Vector2(20, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwva2"]
+size = Vector2(20, 87)
+
+[node name="Area2" type="Node2D"]
+metadata/limite_queda = 700.0
+
+[node name="Fundo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(3.1304348, 2.7)
+texture = ExtResource("1_fundo")
+
+[node name="Chao" type="StaticBody2D" parent="."]
+position = Vector2(576, 577)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao"]
+position = Vector2(-324.5, 0)
+shape = SubResource("Chao")
+
+[node name="ParedeEsquerda" type="StaticBody2D" parent="."]
+position = Vector2(10, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda"]
+shape = SubResource("Parede")
+
+[node name="ParedeDireita" type="StaticBody2D" parent="."]
+position = Vector2(1142, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeDireita"]
+shape = SubResource("Parede")
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(90, 527)
+
+[node name="Inimigo" parent="." instance=ExtResource("2_inimigo")]
+position = Vector2(439, 511)
+
+[node name="Comida" type="Area2D" parent="."]
+position = Vector2(795, 397)
+script = ExtResource("4_comida")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Comida"]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_comida")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Comida"]
+shape = SubResource("Comida")
+
+[node name="RetornoNinho" type="Area2D" parent="."]
+position = Vector2(1100, 478)
+script = ExtResource("5_retorno")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RetornoNinho"]
+position = Vector2(27, -1)
+shape = SubResource("Retorno")
+
+[node name="Aviso" type="Label" parent="RetornoNinho"]
+offset_left = -288.0
+offset_top = -140.0
+offset_right = 72.0
+offset_bottom = -110.0
+text = "Volte ao ninho com a comida"
+horizontal_alignment = 1
+
+[node name="Chao2" type="StaticBody2D" parent="."]
+position = Vector2(1015, 531)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao2"]
+position = Vector2(-6, 0)
+shape = SubResource("RectangleShape2D_7jk4l")
+
+[node name="Chao3" type="StaticBody2D" parent="."]
+position = Vector2(789, 442)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao3"]
+position = Vector2(23, 0)
+shape = SubResource("RectangleShape2D_ih0lv")
+
+[node name="Chao4" type="StaticBody2D" parent="."]
+position = Vector2(630, 529)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao4"]
+position = Vector2(22, 0)
+shape = SubResource("RectangleShape2D_15khk")
+
+[node name="Paredezinha1" type="StaticBody2D" parent="."]
+position = Vector2(893, 493)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredezinha1"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_3lh2e")
+
+[node name="Paredezinha2" type="StaticBody2D" parent="."]
+position = Vector2(711, 480)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredezinha2"]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_rwva2")

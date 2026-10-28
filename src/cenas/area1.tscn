@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://c67y5ffbdhke7"]
+[gd_scene load_steps=16 format=3 uid="uid://c67y5ffbdhke7"]
 
-[ext_resource type="Texture2D" uid="uid://7aty4bp6joon" path="res://sprites/fundos/pngtree-forest-landscape-horizontal-seamless-background-for-games-apps-picture-image_1800420.jpg" id="1_iq3h8"]
-[ext_resource type="Script" uid="uid://jodq81cqhepg" path="res://scripts/volta_ninho.gd" id="3_0gqr5"]
+[ext_resource type="Texture2D" uid="uid://ddfrud1xvy0lb" path="res://sprites/fundos/forest.png" id="1_0gqr5"]
+[ext_resource type="Script" uid="uid://d4k01bmfbgye2" path="res://scripts/proxima_sala.gd" id="3_0gqr5"]
+[ext_resource type="Script" uid="uid://jodq81cqhepg" path="res://scripts/volta_ninho.gd" id="4_4bf1v"]
 [ext_resource type="PackedScene" uid="uid://ck6d4jxai41pl" path="res://cenas/inimigo.tscn" id="4_inimigo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
@@ -11,83 +12,144 @@ size = Vector2(20, 361)
 size = Vector2(20, 396)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
-size = Vector2(1152, 20)
+size = Vector2(498, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
 size = Vector2(1152, 14)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gqr5"]
+size = Vector2(231, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4bf1v"]
+size = Vector2(201, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6w17"]
+size = Vector2(94, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wiq2q"]
+size = Vector2(20, 73)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip332"]
+size = Vector2(20, 69)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
 size = Vector2(20, 202)
 
-[node name="Area1" type="Node2D" unique_id=1889903994]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0634g"]
+size = Vector2(20, 112)
 
-[node name="Fundo" type="Node2D" parent="." unique_id=1164893436]
+[node name="Area1" type="Node2D"]
+metadata/limite_queda = 700.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Fundo" unique_id=1799752516]
-position = Vector2(576.00006, 324)
-scale = Vector2(0.96000004, 0.89875174)
-texture = ExtResource("1_iq3h8")
+[node name="Fundo" type="Node2D" parent="."]
 
-[node name="Paredes" type="Node2D" parent="." unique_id=927283898]
+[node name="Sprite2D" type="Sprite2D" parent="Fundo"]
+texture_filter = 1
+position = Vector2(576.00006, 323.99997)
+scale = Vector2(3.1304348, 2.7)
+texture = ExtResource("1_0gqr5")
 
-[node name="Esquerda" type="StaticBody2D" parent="Paredes" unique_id=761374783]
+[node name="Paredes" type="Node2D" parent="."]
+
+[node name="Esquerda" type="StaticBody2D" parent="Paredes"]
 position = Vector2(10, 223)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Esquerda" unique_id=1584770987]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Esquerda"]
 position = Vector2(0, -27.5)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="Direita" type="StaticBody2D" parent="Paredes" unique_id=1864769309]
+[node name="Direita" type="StaticBody2D" parent="Paredes"]
 position = Vector2(1142, 265)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Direita" unique_id=372353682]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Direita"]
 position = Vector2(0, -53)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="Chao" type="StaticBody2D" parent="Paredes" unique_id=118301081]
-position = Vector2(605, 589)
+[node name="Chao" type="StaticBody2D" parent="Paredes"]
+position = Vector2(604, 577)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao" unique_id=1058748869]
-position = Vector2(-29, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao"]
+position = Vector2(-354, 0)
 shape = SubResource("RectangleShape2D_57qmd")
 
-[node name="Teto" type="StaticBody2D" parent="Paredes" unique_id=1574535412]
+[node name="Teto" type="StaticBody2D" parent="Paredes"]
 position = Vector2(563, 10)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Teto" unique_id=1787066924]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Teto"]
 position = Vector2(13, -3)
 shape = SubResource("RectangleShape2D_d0u6y")
 
-[node name="Spawn" type="Marker2D" parent="." unique_id=1113297807]
-position = Vector2(1075, 541)
+[node name="Chao2" type="StaticBody2D" parent="Paredes"]
+position = Vector2(1010, 532)
+metadata/_edit_group_ = true
 
-[node name="Inimigo" parent="." unique_id=294083897 instance=ExtResource("4_inimigo")]
-position = Vector2(754, 556)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao2"]
+position = Vector2(6.5, 0)
+shape = SubResource("RectangleShape2D_0gqr5")
 
-[node name="VoltaNinho" type="Area2D" parent="." unique_id=1612364333]
-position = Vector2(1142, 478)
+[node name="Chao3" type="StaticBody2D" parent="Paredes"]
+position = Vector2(807, 441)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao3"]
+position = Vector2(-6.5, 0)
+shape = SubResource("RectangleShape2D_4bf1v")
+
+[node name="Chao4" type="StaticBody2D" parent="Paredes"]
+position = Vector2(653, 530)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao4"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_u6w17")
+
+[node name="Paredezinha1" type="StaticBody2D" parent="Paredes"]
+position = Vector2(891, 492)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Paredezinha1"]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_wiq2q")
+
+[node name="Paredezinha2" type="StaticBody2D" parent="Paredes"]
+position = Vector2(710, 489)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Paredezinha2"]
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_ip332")
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(1068, 527)
+
+[node name="Inimigo" parent="." instance=ExtResource("4_inimigo")]
+position = Vector2(107, 520)
+
+[node name="ProximaSala" type="Area2D" parent="."]
+position = Vector2(11, 473)
 script = ExtResource("3_0gqr5")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VoltaNinho" unique_id=1584355548]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProximaSala"]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_3gngh")
 
-[node name="Label" type="Label" parent="." unique_id=1817513754]
-offset_left = 912.0
-offset_top = 372.0
-offset_right = 1093.0
-offset_bottom = 395.0
-text = "Volte para o ninho aqui"
+[node name="Label" type="Label" parent="."]
+offset_left = 55.0
+offset_top = 381.0
+offset_right = 285.0
+offset_bottom = 404.0
+text = "Avance para a proxima sala"
 
-[node name="Label2" type="Label" parent="." unique_id=1921904487]
-offset_left = 453.0
-offset_top = 245.0
-offset_right = 751.0
-offset_bottom = 287.0
-theme_override_font_sizes/font_size = 30
-text = "Aperte X para atacar"
+[node name="VoltaNinho" type="Area2D" parent="."]
+position = Vector2(1142, 467)
+script = ExtResource("4_4bf1v")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VoltaNinho"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_0634g")

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c3lg6kd2sipjk"]
+[gd_scene load_steps=6 format=3 uid="uid://c3lg6kd2sipjk"]
 
 [ext_resource type="Script" uid="uid://dq8pw2t8puw8k" path="res://scripts/menu_principal.gd" id="1_ul6ys"]
 [ext_resource type="Texture2D" uid="uid://cu4qut88r0f1v" path="res://menu/canvas.png" id="2_0330o"]
@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://cq8byk2jlafli" path="res://menu/botão_jogo.png" id="4_0330o"]
 [ext_resource type="AudioStream" uid="uid://cpt48lk3yqaqx" path="res://SFX/som_do_bot├úo.mp3" id="4_ns3he"]
 
-[node name="Menu" type="Node2D" unique_id=1992250653]
+[node name="Menu" type="Node2D"]
 script = ExtResource("1_ul6ys")
 
-[node name="Button_manager" type="Control" parent="." unique_id=321583044]
+[node name="Button_manager" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,12 +19,12 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="background_menu" type="Sprite2D" parent="Button_manager" unique_id=1780439267]
+[node name="background_menu" type="Sprite2D" parent="Button_manager"]
 position = Vector2(369, 358)
 scale = Vector2(1.2625524, 1.023841)
 texture = ExtResource("2_0330o")
 
-[node name="Titulo" type="Label" parent="Button_manager" unique_id=1594333856]
+[node name="Titulo" type="Label" parent="Button_manager"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 9.0
@@ -38,7 +38,7 @@ text = "O último ovo"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Começar" type="TextureButton" parent="Button_manager" unique_id=396561688]
+[node name="Começar" type="TextureButton" parent="Button_manager"]
 texture_filter = 3
 layout_mode = 0
 offset_left = 591.0
@@ -46,44 +46,45 @@ offset_top = -89.0
 offset_right = 1401.0
 offset_bottom = 327.0
 size_flags_vertical = 3
+mouse_filter = 2
 texture_normal = ExtResource("4_0330o")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Button_manager/Começar" unique_id=1146399613]
+[node name="Label" type="Label" parent="Button_manager/Começar"]
 layout_mode = 0
 offset_left = 245.0
 offset_top = 160.0
 offset_right = 413.0
 offset_bottom = 224.0
-mouse_filter = 1
+mouse_filter = 0
 theme_override_fonts/font = ExtResource("2_gmcsc")
 theme_override_font_sizes/font_size = 50
 text = "JOGAR"
 
-[node name="Opções" type="TextureButton" parent="Button_manager" unique_id=303832899]
+[node name="Opções" type="TextureButton" parent="Button_manager"]
 texture_filter = 3
-propagate_maximum_size = true
 layout_mode = 0
 offset_left = 595.0
 offset_top = 110.0
 offset_right = 1405.0
 offset_bottom = 528.0
 size_flags_vertical = 3
+mouse_filter = 2
 texture_normal = ExtResource("4_0330o")
 stretch_mode = 0
 
-[node name="label_opções" type="Label" parent="Button_manager/Opções" unique_id=716132758]
+[node name="label_opções" type="Label" parent="Button_manager/Opções"]
 layout_mode = 0
 offset_left = 241.0
 offset_top = 162.0
 offset_right = 388.0
 offset_bottom = 213.0
-mouse_filter = 1
+mouse_filter = 0
 theme_override_fonts/font = ExtResource("2_gmcsc")
 theme_override_font_sizes/font_size = 50
 text = "OPÇÕES"
 
-[node name="Sair" type="TextureButton" parent="Button_manager" unique_id=1752577097]
+[node name="Sair" type="TextureButton" parent="Button_manager"]
 texture_filter = 3
 layout_mode = 0
 offset_left = 592.0
@@ -91,35 +92,38 @@ offset_top = 321.0
 offset_right = 1402.0
 offset_bottom = 739.0
 size_flags_vertical = 3
+mouse_filter = 2
 texture_normal = ExtResource("4_0330o")
 stretch_mode = 0
 
-[node name="label_sair" type="Label" parent="Button_manager/Sair" unique_id=517475691]
+[node name="label_sair" type="Label" parent="Button_manager/Sair"]
 layout_mode = 0
 offset_left = 262.0
 offset_top = 158.0
 offset_right = 359.0
 offset_bottom = 263.0
-mouse_filter = 1
+mouse_filter = 0
 theme_override_fonts/font = ExtResource("2_gmcsc")
 theme_override_font_sizes/font_size = 50
 text = "SAIR
 "
 
-[node name="SomDoBotão" type="AudioStreamPlayer" parent="." unique_id=1665858008]
+[node name="SomDoBotão" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ns3he")
 bus = &"Efeitos"
 
 [connection signal="mouse_entered" from="Button_manager/Começar" to="." method="_on_começar_mouse_entered"]
 [connection signal="mouse_exited" from="Button_manager/Começar" to="." method="_on_começar_mouse_exited"]
-[connection signal="pressed" from="Button_manager/Começar" to="." method="_on_começar_pressed"]
 [connection signal="focus_entered" from="Button_manager/Começar/Label" to="." method="_on_label_focus_entered"]
 [connection signal="focus_exited" from="Button_manager/Começar/Label" to="." method="_on_label_focus_exited"]
+[connection signal="gui_input" from="Button_manager/Começar/Label" to="." method="_on_jogar_label_gui_input"]
 [connection signal="mouse_entered" from="Button_manager/Começar/Label" to="." method="_on_label_mouse_entered"]
 [connection signal="mouse_exited" from="Button_manager/Começar/Label" to="." method="_on_label_mouse_exited"]
 [connection signal="pressed" from="Button_manager/Opções" to="." method="_on_opções_pressed"]
+[connection signal="gui_input" from="Button_manager/Opções/label_opções" to="." method="_on_opcoes_label_gui_input"]
 [connection signal="mouse_entered" from="Button_manager/Opções/label_opções" to="." method="_on_label_opções_mouse_entered"]
 [connection signal="mouse_exited" from="Button_manager/Opções/label_opções" to="." method="_on_label_opções_mouse_exited"]
 [connection signal="pressed" from="Button_manager/Sair" to="." method="_on_sair_pressed"]
+[connection signal="gui_input" from="Button_manager/Sair/label_sair" to="." method="_on_sair_label_gui_input"]
 [connection signal="mouse_entered" from="Button_manager/Sair/label_sair" to="." method="_on_label_sair_mouse_entered"]
 [connection signal="mouse_exited" from="Button_manager/Sair/label_sair" to="." method="_on_label_sair_mouse_exited"]

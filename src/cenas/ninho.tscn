@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfa3adsokb7b7"]
+[gd_scene load_steps=13 format=3 uid="uid://dfa3adsokb7b7"]
 
 [ext_resource type="Script" uid="uid://rgowblupcxs3" path="res://scripts/ninho.gd" id="1_e4r2s"]
 [ext_resource type="Texture2D" uid="uid://7aty4bp6joon" path="res://sprites/fundos/pngtree-forest-landscape-horizontal-seamless-background-for-games-apps-picture-image_1800420.jpg" id="2_4c20x"]
 [ext_resource type="Texture2D" uid="uid://c082lkdbef33n" path="res://sprites/sprites_ovo/tile010.png" id="3_ugupw"]
 [ext_resource type="Script" uid="uid://c8a8q8ssa0jgo" path="res://scripts/saida_ninho.gd" id="4_4c20x"]
 [ext_resource type="PackedScene" uid="uid://dsxx05aoqqkyk" path="res://cenas/NPC.tscn" id="5_ugupw"]
+[ext_resource type="Texture2D" uid="uid://6a66f12x488" path="res://sprites/hud/Vida_ovo.png" id="6_5w6jf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_degj1"]
 size = Vector2(179, 90)
@@ -20,6 +21,18 @@ size = Vector2(11, 645)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(16, 151)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_controles"]
+bg_color = Color(0.04, 0.05, 0.04, 0.82)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.84, 0.88, 0.72, 0.9)
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
 
 [node name="Ninho" type="Node2D"]
 script = ExtResource("1_e4r2s")
@@ -88,3 +101,35 @@ text = "Saia do ninho por aqui"
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_ugupw")]
 position = Vector2(940.0001, 536)
+
+[node name="Ovo" type="CharacterBody2D" parent="."]
+position = Vector2(576, 515)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Ovo"]
+texture = ExtResource("6_5w6jf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Painel" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -618.0
+offset_top = 18.0
+offset_right = -18.0
+offset_bottom = 229.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_controles")
+
+[node name="Conteudo" type="VBoxContainer" parent="CanvasLayer/Painel"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 5
+
+[node name="Titulo" type="Label" parent="CanvasLayer/Painel/Conteudo"]
+text = "CONTROLES"
+
+[node name="Lista" type="VBoxContainer" parent="CanvasLayer/Painel/Conteudo"]
+theme_override_constants/separation = 1

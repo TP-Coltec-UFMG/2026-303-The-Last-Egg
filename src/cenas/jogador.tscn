@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://diwvrbanm5h42"]
+[gd_scene load_steps=31 format=3 uid="uid://diwvrbanm5h42"]
 
 [ext_resource type="Script" uid="uid://cu0fy64nfb7a1" path="res://scripts/jogador.gd" id="1_06a7y"]
 [ext_resource type="Texture2D" uid="uid://dols32k7yt1b5" path="res://sprites/sprites_Saaira(incompleto)/prota_andando.png" id="2_ufweb"]
@@ -112,7 +112,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rge55")
 }],
-"loop": 1,
+"loop": true,
 "name": &"andar",
 "speed": 10.0
 }, {
@@ -129,7 +129,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7cnop")
 }],
-"loop": 0,
+"loop": false,
 "name": &"atacar",
 "speed": 10.0
 }, {
@@ -152,7 +152,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t6o5y")
 }],
-"loop": 0,
+"loop": false,
 "name": &"atacar_correndo",
 "speed": 10.0
 }, {
@@ -172,7 +172,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jvbpx")
 }],
-"loop": 1,
+"loop": true,
 "name": &"parado",
 "speed": 8.0
 }]
@@ -182,32 +182,33 @@ size = Vector2(24.564621, 22.564621)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_06a7y"]
 
-[node name="Jogador" type="CharacterBody2D" unique_id=1238527406]
-scale = Vector2(0.71629703, 0.71629703)
+[node name="Jogador" type="CharacterBody2D"]
+scale = Vector2(0.56867933, 0.56867933)
 script = ExtResource("1_06a7y")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1544014351]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1.396069, -1.396069)
-scale = Vector2(0.51855195, 0.51540726)
+scale = Vector2(1.2145754, 1.2072098)
 sprite_frames = SubResource("SpriteFrames_hvend")
 animation = &"parado"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=990790866]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.28231, -1.28231)
+scale = Vector2(3.0296245, 3.0296245)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="AreaAtaque" type="Area2D" parent="." unique_id=1177121969]
+[node name="AreaAtaque" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque" unique_id=909016033]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque"]
 scale = Vector2(9.332556, 7.8831577)
 shape = SubResource("CircleShape2D_06a7y")
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=2056809461]
+[node name="HUD" type="CanvasLayer" parent="."]
 layer = 10
 
-[node name="VidaLabel" type="Label" parent="HUD" unique_id=2056809466]
+[node name="VidaLabel" type="Label" parent="HUD"]
 offset_left = 11.0
 offset_top = 22.000002
 offset_right = 59.0
@@ -220,31 +221,32 @@ theme_override_constants/shadow_offset_y = 2
 theme_override_font_sizes/font_size = 20
 text = "Vida:"
 
-[node name="Ovo1" type="Sprite2D" parent="HUD" unique_id=2056809462]
+[node name="Ovo1" type="Sprite2D" parent="HUD"]
 texture_filter = 1
 position = Vector2(68, 36)
 texture = ExtResource("6_vida_ovo")
 
-[node name="Ovo2" type="Sprite2D" parent="HUD" unique_id=2056809463]
+[node name="Ovo2" type="Sprite2D" parent="HUD"]
 texture_filter = 1
 position = Vector2(104, 36)
 texture = ExtResource("6_vida_ovo")
 
-[node name="Ovo3" type="Sprite2D" parent="HUD" unique_id=2056809464]
+[node name="Ovo3" type="Sprite2D" parent="HUD"]
 texture_filter = 1
 position = Vector2(140, 36)
 texture = ExtResource("6_vida_ovo")
 
-[node name="MensagemMorte" type="Label" parent="HUD" unique_id=2056809465]
+[node name="MensagemMorte" type="Label" parent="HUD"]
 visible = false
-offset_left = 410.0
-offset_top = 270.0
-offset_right = 742.0
-offset_bottom = 330.0
+offset_left = 200.0
+offset_top = 250.0
+offset_right = 952.0
+offset_bottom = 390.0
 theme_override_colors/font_color = Color(1, 0.86, 0.72, 1)
 theme_override_colors/font_shadow_color = Color(0.12, 0.06, 0.04, 0.9)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
-theme_override_font_sizes/font_size = 38
-text = "VOCE MORREU"
+theme_override_font_sizes/font_size = 34
+text = "Você morreu"
 horizontal_alignment = 1
+vertical_alignment = 1

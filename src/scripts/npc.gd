@@ -8,7 +8,7 @@ enum Estado { PATRULHANDO, DIALOGANDO }
 @export var falas: Array[String] = [ 
 "Os filhotes estão com fome, pode ir lá embaixo pegar algo?", 
 "Tome cuidado por favor, lá embaixo possui muitos predadores.", 
-"Fique de olho em qualquer coisa." 
+"Fique de olho em qualquer coisa e lembre-se de apertar X para atacar." 
 ] 
 
 @onready var sprite = $AnimatedSprite2D 
@@ -60,7 +60,11 @@ func iniciar_dialogo():
 	mostrar_fala() 
 	
 func mostrar_fala(): 
-	label_dialogo.text = falas[fala_atual] 
+	var fala: String = falas[fala_atual]
+	var codigo_tecla_ataque: int = ConfigFileHandler.controles_padrao.get("Atacar", KEY_X)
+	var tecla_ataque := OS.get_keycode_string(codigo_tecla_ataque)
+	fala = fala.replace("apertar X para atacar", "apertar %s para atacar" % tecla_ataque)
+	label_dialogo.text = fala
 
 func _input(event): 
 	if estado == Estado.DIALOGANDO and event.is_action_pressed("Interagir"): 

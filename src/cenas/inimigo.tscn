@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ck6d4jxai41pl"]
+[gd_scene load_steps=11 format=3 uid="uid://ck6d4jxai41pl"]
 
 [ext_resource type="Script" uid="uid://n2tjhavk7y31" path="res://scripts/inimigo.gd" id="1_inimigo"]
 [ext_resource type="Texture2D" uid="uid://b67rpf1al0rth" path="res://sprites/inimigo_tucano/image (56).png" id="2_l8wry"]
@@ -41,12 +41,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h71cv")
 }],
-"loop": 1,
+"loop": true,
 "name": &"andar",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": 1,
+"loop": true,
 "name": &"atacar",
 "speed": 5.0
 }]
@@ -57,22 +57,23 @@ size = Vector2(38, 38)
 [sub_resource type="CircleShape2D" id="CircleShape2D_inimigo"]
 radius = 36.013885
 
-[node name="Inimigo" type="CharacterBody2D" unique_id=1393895566]
+[node name="Inimigo" type="CharacterBody2D"]
+texture_filter = 1
 script = ExtResource("1_inimigo")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=427026562]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(3.3768978, 3.3768978)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"andar"
 speed_scale = 3.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1529412449]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.401297, 1.401297)
 shape = SubResource("RectangleShape2D_inimigo")
 
-[node name="Hitbox" type="Area2D" parent="." unique_id=694754384]
+[node name="Hitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=611351052]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 scale = Vector2(1.3270376, 1.3270376)
 shape = SubResource("CircleShape2D_inimigo")
