@@ -50,24 +50,24 @@ https://drive.google.com/file/d/1HMpi_7pj8v29ORU3cUP88R2J5b3mHz3P/view?usp=shari
 
 
 ## Configurações
-<img src="imgs/Configurações_TheLastEgg.png" alt="Logo">
+<img src="imgs/Menu.png" alt="Logo">
 
 Nas configurações do nosso jogo, até o momento, há controle de volume básico (geral, música e efeitos sonoros). Atualmente, temos duas acessibilidades disponíveis: daltonismo e modo de alto contraste. Os tipos de daltonismo disponíveis são Protanopia, Deuteranopia e Tritanopia. No modo de alto contraste, todas as cores são realçadas para oferecer acessibilidade àqueles que têm baixa acuidade visual.Todas as alterações e/ou modificações nas configurações são salvadas e aplicadas ;-]
 
 ## Remapeamento de controles
 
-<img src="imgs/Configurar_controles.png" alt="Logo">
+<img src="imgs/Controles.png" alt="Logo">
 
 Todos os controles podem ser remapeados nessa parte das configurações.
 
 ## Primeira Cena
-<img src="imgs/Primeira_Cena.png" alt="Ninho">
+<img src="imgs/NinhoInicio.png" alt="Ninho">
 
 - Inicialmente temos um placeholder de um cenário para o ninho e o protagonista, o passáro atualmente só consegue andar e pular pelo ninho, entretanto futuramente será adicionado novas mecânicas como um pequeno voo e ataques.
 
 ## Mais Cenas
 
-<img src="imgs/Cena Tucano.png" alt="Cena">
+<img src="imgs/area2.png" alt="Cena">
 
 ## GDC (Game Design Canvas)
 
@@ -89,6 +89,18 @@ Todos os controles podem ser remapeados nessa parte das configurações.
 # **Animação de atacar (Sairá-apunhalada)**
 
 <img src="imgs/Ataque.jpeg" alt="Animação de Atacar" width="500">
+
+# **Uruçu-capixaba**
+
+<img src="imgs/Bee_Walk (1).png" alt="Uruçu-capixaba*" width="500">
+
+# **Sapinho pingo-de-ouro**
+
+<img src="imgs/Adobe Express - file (2).png" alt="Sapinho pingo-de-ouro**" width="500">
+
+# **Araçari(Pteroglossus)**
+
+<img src="imgs/Adobe Express - file (1).png" alt="Araçari(Pteroglossus)" width="500">
 
 </div>
 
