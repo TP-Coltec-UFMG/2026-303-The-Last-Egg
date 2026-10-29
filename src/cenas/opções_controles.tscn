@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dyqc4jj8flu0u" path="res://scripts/opções.gd" id="1_7uat8"]
 [ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://fonte/GrapeSoda.ttf" id="2_lg72o"]
-[ext_resource type="Texture2D" uid="uid://d3e6lhel3rrym" path="res://sprites/sprites_ovo/tile036.png" id="3_8ku8j"]
 
 [node name="opções" type="Control" unique_id=411226169]
 layout_mode = 3
@@ -114,11 +113,6 @@ text = "ir para opções de controle
 
 
 "
-
-[node name="Tile036" type="Sprite2D" parent="." unique_id=2134298878]
-position = Vector2(1014, 544)
-scale = Vector2(1.0286459, 1.2259616)
-texture = ExtResource("3_8ku8j")
 
 [connection signal="changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_geral_barra_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_value_changed"]

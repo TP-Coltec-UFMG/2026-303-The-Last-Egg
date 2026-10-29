@@ -1,10 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://bcspm7yuvaxuj"]
+[gd_scene format=3 uid="uid://bcspm7yuvaxuj"]
 
 [ext_resource type="Texture2D" uid="uid://ddfrud1xvy0lb" path="res://sprites/fundos/forest.png" id="1_fundo"]
-[ext_resource type="PackedScene" uid="uid://ck6d4jxai41pl" path="res://cenas/inimigo.tscn" id="2_inimigo"]
-[ext_resource type="Texture2D" uid="uid://6a66f12x488" path="res://sprites/hud/Vida_ovo.png" id="3_comida"]
+[ext_resource type="Texture2D" uid="uid://ct00eod8wd6h4" path="res://sprites/acorn/acorn-1.png" id="3_ih0lv"]
+[ext_resource type="Texture2D" uid="uid://jtvtdtlxeoiy" path="res://sprites/acorn/acorn-2.png" id="4_15khk"]
 [ext_resource type="Script" uid="uid://c0ok6540kawtt" path="res://scripts/comida.gd" id="4_comida"]
-[ext_resource type="Script" uid="uid://b0blbr5s6joqp" path="res://scripts/retorno_ninho_comida.gd" id="5_retorno"]
+[ext_resource type="Texture2D" uid="uid://by04qxoxuvpfu" path="res://sprites/acorn/acorn-3.png" id="5_3lh2e"]
+[ext_resource type="Script" uid="uid://cql1osbv8vj8g" path="res://scripts/area_3.gd" id="6_3lh2e"]
+[ext_resource type="PackedScene" uid="uid://x77eqpv2t7gn" path="res://cenas/inseto.tscn" id="7_15khk"]
+[ext_resource type="PackedScene" uid="uid://b3aaglqdwldlk" path="res://cenas/NPC_sapo.tscn" id="8_3lh2e"]
 
 [sub_resource type="RectangleShape2D" id="Chao"]
 size = Vector2(503, 20)
@@ -13,7 +16,24 @@ size = Vector2(503, 20)
 size = Vector2(20, 648)
 
 [sub_resource type="CircleShape2D" id="Comida"]
-radius = 42.0
+radius = 20.024984
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ih0lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_15khk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3lh2e")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="Retorno"]
 size = Vector2(24, 180)
@@ -33,105 +53,120 @@ size = Vector2(20, 92)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwva2"]
 size = Vector2(20, 87)
 
-[node name="Area2" type="Node2D"]
+[node name="Area2" type="Node2D" unique_id=403783987]
 metadata/limite_queda = 700.0
 
-[node name="Fundo" type="Sprite2D" parent="."]
+[node name="Fundo" type="Sprite2D" parent="." unique_id=283137266]
 texture_filter = 1
 position = Vector2(576, 324)
 scale = Vector2(3.1304348, 2.7)
 texture = ExtResource("1_fundo")
+flip_h = true
 
-[node name="Chao" type="StaticBody2D" parent="."]
+[node name="Chao" type="StaticBody2D" parent="." unique_id=410796145]
 position = Vector2(576, 577)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao"]
-position = Vector2(-324.5, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao" unique_id=1909120830]
+position = Vector2(327, -2)
 shape = SubResource("Chao")
 
-[node name="ParedeEsquerda" type="StaticBody2D" parent="."]
+[node name="ParedeEsquerda" type="StaticBody2D" parent="." unique_id=109166897]
 position = Vector2(10, 324)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda" unique_id=967372847]
 shape = SubResource("Parede")
 
-[node name="ParedeDireita" type="StaticBody2D" parent="."]
+[node name="ParedeDireita" type="StaticBody2D" parent="." unique_id=390927671]
 position = Vector2(1142, 324)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeDireita"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeDireita" unique_id=1896715402]
+position = Vector2(-9, -6)
 shape = SubResource("Parede")
 
-[node name="Spawn" type="Marker2D" parent="."]
-position = Vector2(90, 527)
+[node name="Spawn" type="Marker2D" parent="." unique_id=773932583]
+position = Vector2(1081, 467)
 
-[node name="Inimigo" parent="." instance=ExtResource("2_inimigo")]
-position = Vector2(439, 511)
-
-[node name="Comida" type="Area2D" parent="."]
-position = Vector2(795, 397)
+[node name="Comida" type="Area2D" parent="." unique_id=2123373798]
+position = Vector2(121, 506)
 script = ExtResource("4_comida")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Comida"]
-texture_filter = 1
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("3_comida")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Comida"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Comida" unique_id=1303472834]
+position = Vector2(-4, -3)
 shape = SubResource("Comida")
 
-[node name="RetornoNinho" type="Area2D" parent="."]
-position = Vector2(1100, 478)
-script = ExtResource("5_retorno")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Comida" unique_id=1490084646]
+position = Vector2(-4, -6)
+scale = Vector2(2.25, 2.1428585)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame_progress = 0.20846519
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RetornoNinho"]
+[node name="Area3" type="Area2D" parent="." unique_id=1455284135]
+position = Vector2(1052, 497)
+script = ExtResource("6_3lh2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area3" unique_id=1320951341]
 position = Vector2(27, -1)
 shape = SubResource("Retorno")
 
-[node name="Aviso" type="Label" parent="RetornoNinho"]
-offset_left = -288.0
-offset_top = -140.0
-offset_right = 72.0
-offset_bottom = -110.0
-text = "Volte ao ninho com a comida"
-horizontal_alignment = 1
-
-[node name="Chao2" type="StaticBody2D" parent="."]
-position = Vector2(1015, 531)
+[node name="Chao2" type="StaticBody2D" parent="." unique_id=1047684609]
+position = Vector2(135, 531)
+scale = Vector2(1.213117, 1)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao2" unique_id=980741032]
 position = Vector2(-6, 0)
 shape = SubResource("RectangleShape2D_7jk4l")
 
-[node name="Chao3" type="StaticBody2D" parent="."]
-position = Vector2(789, 442)
+[node name="Chao3" type="StaticBody2D" parent="." unique_id=1969979122]
+position = Vector2(327, 445)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao3" unique_id=1089279159]
 position = Vector2(23, 0)
 shape = SubResource("RectangleShape2D_ih0lv")
 
-[node name="Chao4" type="StaticBody2D" parent="."]
-position = Vector2(630, 529)
+[node name="Chao4" type="StaticBody2D" parent="." unique_id=195523972]
+position = Vector2(477, 532)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao4" unique_id=1226515618]
 position = Vector2(22, 0)
 shape = SubResource("RectangleShape2D_15khk")
 
-[node name="Paredezinha1" type="StaticBody2D" parent="."]
-position = Vector2(893, 493)
+[node name="Paredezinha1" type="StaticBody2D" parent="." unique_id=1293248468]
+position = Vector2(439, 485)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredezinha1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredezinha1" unique_id=128287688]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_3lh2e")
 
-[node name="Paredezinha2" type="StaticBody2D" parent="."]
-position = Vector2(711, 480)
+[node name="Paredezinha2" type="StaticBody2D" parent="." unique_id=679408180]
+position = Vector2(260, 490)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredezinha2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredezinha2" unique_id=510011380]
 position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_rwva2")
+
+[node name="Paredezinha3" type="StaticBody2D" parent="." unique_id=1501899052]
+position = Vector2(538, 589)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredezinha3" unique_id=1607696116]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_rwva2")
+
+[node name="Inimigo" parent="." unique_id=1796498497 instance=ExtResource("7_15khk")]
+position = Vector2(722, 553)
+
+[node name="CharacterBody2D" parent="." unique_id=290666181 instance=ExtResource("8_3lh2e")]
+position = Vector2(357, 411)
+
+[node name="Label2" type="Label" parent="." unique_id=1448970690]
+offset_left = 797.0
+offset_top = 390.0
+offset_right = 837.0
+offset_bottom = 413.0

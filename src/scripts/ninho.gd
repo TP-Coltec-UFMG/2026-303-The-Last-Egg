@@ -1,59 +1,63 @@
 extends Node2D
 
-@onready var lista_controles: VBoxContainer = $CanvasLayer/Painel/Conteudo/Lista
-@onready var aviso_controles: Label = $CanvasLayer/Painel/Conteudo/AvisoControles
-
 func _ready() -> void:
-	ConfigFileHandler.controles_alterados.connect(atualizar_lista_controles)
-	get_tree().create_timer(60.0).timeout.connect(_ocultar_aviso_controles)
-
-	# Se o jogador ainda não existe, cria a primeira instância
 	if GameManager.jogador == null:
 		GameManager.comida_coletada = false
 		var novo_jogador = preload("res://cenas/jogador.tscn").instantiate()
 		var sprite = novo_jogador.get_node("AnimatedSprite2D")
 		sprite.scale = Vector2(3, 3)
-		
-		# Registra no Singleton e adiciona à cena
+
 		GameManager.registrar_jogador(novo_jogador)
 		add_child(novo_jogador)
 		novo_jogador.global_position = $Spawn.global_position
-	else:
-		# Se já existe (veio de outra cena), o GerenciadorCena já o inseriu aqui
-		pass
 
-	atualizar_lista_controles()
+	if has_node("TutorialLayer/TutorialControl/TutorialPanel/TutorialLista"):
+		if not ConfigFileHandler.controles_alterados.is_connected(atualizar_lista_controles):
+			ConfigFileHandler.controles_alterados.connect(atualizar_lista_controles)
+		atualizar_lista_controles()
 
-func _ocultar_aviso_controles() -> void:
-	aviso_controles.hide()
+		$TutorialLayer/AvisoControlesTimer.timeout.connect(_ocultar_aviso_controles)
+		$TutorialLayer/AvisoControlesTimer.start()
 
 func atualizar_lista_controles() -> void:
-	var controles: Dictionary = ConfigFileHandler.controles_padrao
-	var nomes_controles := ["Esquerda", "Direita", "Cima", "Baixo", "Pular", "Interagir", "Atacar"]
+	var lista: VBoxContainer = $TutorialLayer/TutorialControl/TutorialPanel/TutorialLista/ControlesLista
+	for filho in lista.get_children():
+		lista.remove_child(filho)
+		filho.queue_free()
 
-	for linha in lista_controles.get_children():
-		linha.queue_free()
-
-	for nome_controle in nomes_controles:
-		var codigo_tecla: int = controles.get(nome_controle, KEY_UNKNOWN)
+	var nomes_acoes := {
+		"Esquerda": "Mover para esquerda",
+		"Direita": "Mover para direita",
+		"Cima": "Mover para cima",
+		"Baixo": "Mover para baixo",
+		"Pular": "Pular",
+		"Atacar": "Atacar",
+		"Interagir": "Interagir",
+	}
+	for nome_controle in nomes_acoes:
+		var codigo_tecla: int = ConfigFileHandler.controles_padrao.get(nome_controle, KEY_UNKNOWN)
+		var icone: Texture2D = ConfigFileHandler.obter_icone_tecla(codigo_tecla)
 		var linha := HBoxContainer.new()
-		linha.custom_minimum_size.y = 22
-		lista_controles.add_child(linha)
+		linha.add_theme_constant_override("separation", 6)
 
-		var nome := Label.new()
-		nome.text = nome_controle
-		nome.custom_minimum_size.x = 102
-		linha.add_child(nome)
+		var nome_acao := Label.new()
+		nome_acao.text = nomes_acoes[nome_controle]
+		nome_acao.custom_minimum_size.x = 180
+		nome_acao.add_theme_font_size_override("font_size", 16)
+		linha.add_child(nome_acao)
 
-		var icone := TextureRect.new()
-		icone.custom_minimum_size = Vector2(36, 22)
-		icone.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		icone.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		icone.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-		icone.texture = ConfigFileHandler.obter_icone_tecla(codigo_tecla)
-		linha.add_child(icone)
+		var imagem_tecla := TextureRect.new()
+		imagem_tecla.custom_minimum_size = Vector2(30, 28)
+		imagem_tecla.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		imagem_tecla.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		imagem_tecla.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		imagem_tecla.texture = icone if icone != null else preload("res://sprites/teclas_configuracoes/keyboard.png")
+		linha.add_child(imagem_tecla)
+		lista.add_child(linha)
 
-		if icone.texture == null:
-			var texto_tecla := Label.new()
-			texto_tecla.text = OS.get_keycode_string(codigo_tecla)
-			linha.add_child(texto_tecla)
+func _ocultar_aviso_controles() -> void:
+	$TutorialLayer/TutorialControl/TutorialPanel/TutorialLista/AvisoControles.hide()
+
+func abrir_controles() -> void:
+	if has_node("PauseLayer"):
+		$PauseLayer.call("abrir_controles")

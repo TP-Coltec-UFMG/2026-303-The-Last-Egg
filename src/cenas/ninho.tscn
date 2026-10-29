@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dfa3adsokb7b7"]
+[gd_scene format=3 uid="uid://dfa3adsokb7b7"]
 
 [ext_resource type="Script" uid="uid://rgowblupcxs3" path="res://scripts/ninho.gd" id="1_e4r2s"]
-[ext_resource type="Texture2D" uid="uid://7aty4bp6joon" path="res://sprites/fundos/pngtree-forest-landscape-horizontal-seamless-background-for-games-apps-picture-image_1800420.jpg" id="2_4c20x"]
+[ext_resource type="Texture2D" uid="uid://bvynflv8emayo" path="res://sprites/props-sliced/leaves.png" id="2_5w6jf"]
+[ext_resource type="Texture2D" uid="uid://diiv7nyptb6s8" path="res://sprites/tileset-sliced.png" id="3_0uw3r"]
 [ext_resource type="Texture2D" uid="uid://c082lkdbef33n" path="res://sprites/sprites_ovo/tile010.png" id="3_ugupw"]
 [ext_resource type="Script" uid="uid://c8a8q8ssa0jgo" path="res://scripts/saida_ninho.gd" id="4_4c20x"]
+[ext_resource type="Texture2D" uid="uid://sb2myd1cjqyg" path="res://sprites/props-sliced/branch-03.png" id="4_m567b"]
 [ext_resource type="PackedScene" uid="uid://dsxx05aoqqkyk" path="res://cenas/NPC.tscn" id="5_ugupw"]
 [ext_resource type="Texture2D" uid="uid://6a66f12x488" path="res://sprites/hud/Vida_ovo.png" id="6_5w6jf"]
 
@@ -22,117 +24,297 @@ size = Vector2(11, 645)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(16, 151)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_controles"]
-bg_color = Color(0.04, 0.05, 0.04, 0.82)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.84, 0.88, 0.72, 0.9)
-content_margin_left = 10.0
-content_margin_top = 8.0
-content_margin_right = 10.0
-content_margin_bottom = 8.0
-
-[node name="Ninho" type="Node2D"]
+[node name="Ninho" type="Node2D" unique_id=1285375700]
 script = ExtResource("1_e4r2s")
 
-[node name="Fundo" type="Node2D" parent="."]
+[node name="Fundo" type="Node2D" parent="." unique_id=1967753792]
 
-[node name="Sprite2D" type="Sprite2D" parent="Fundo"]
-position = Vector2(576, 324)
-scale = Vector2(0.96, 0.8987517)
-texture = ExtResource("2_4c20x")
+[node name="Sprite2D18" type="Sprite2D" parent="Fundo" unique_id=1246014]
+position = Vector2(878.99994, 118)
+scale = Vector2(4.938743, 4.3180766)
+texture = ExtResource("2_5w6jf")
 
-[node name="Ninhozinho" type="StaticBody2D" parent="."]
+[node name="Sprite2D17" type="Sprite2D" parent="Fundo" unique_id=207636195]
+position = Vector2(1131.9999, 222)
+scale = Vector2(3.546357, 3.7980583)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Fundo" unique_id=2030849202]
+position = Vector2(593, 433)
+scale = Vector2(9.881191, 9.666666)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Fundo" unique_id=546855738]
+position = Vector2(499.00003, 108.00001)
+scale = Vector2(5.643178, 4.12901)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Fundo" unique_id=412942415]
+position = Vector2(938.12, 247.54611)
+scale = Vector2(3.312848, 3.0199265)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Fundo" unique_id=595349957]
+position = Vector2(554, 494)
+scale = Vector2(2.6903315, 2.4484975)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Fundo" unique_id=192865170]
+position = Vector2(940, 46)
+scale = Vector2(3.672185, 3.174249)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Fundo" unique_id=729632998]
+position = Vector2(184.49998, 468.5)
+scale = Vector2(2.9337747, 2.733333)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Fundo" unique_id=740551268]
+position = Vector2(176.25006, 155.60191)
+scale = Vector2(3.546357, 3.7980583)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Fundo" unique_id=825120364]
+position = Vector2(883.00006, 377)
+scale = Vector2(3.2847679, 3.1238096)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Fundo" unique_id=82222276]
+position = Vector2(677.00006, 286)
+scale = Vector2(2.188609, 2.0969949)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Fundo" unique_id=1894260891]
+position = Vector2(348, 363.99997)
+scale = Vector2(2.188609, 2.0969949)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Fundo" unique_id=119213939]
+position = Vector2(538, 235)
+scale = Vector2(3.061191, 2.866667)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Fundo" unique_id=754933854]
+position = Vector2(1044, 444)
+scale = Vector2(3.418013, 3.3194861)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Fundo" unique_id=492412339]
+position = Vector2(87, 259)
+scale = Vector2(2.9743047, 3.1766295)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Fundo" unique_id=2025528554]
+position = Vector2(892, 531)
+scale = Vector2(3.147285, 2.8104024)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Fundo" unique_id=703539088]
+position = Vector2(238.99997, 556)
+scale = Vector2(3.312847, 2.4580216)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Fundo" unique_id=1998113724]
+position = Vector2(267.99997, 546)
+scale = Vector2(3.061191, 2.866667)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Fundo" unique_id=341821338]
+position = Vector2(116, 68)
+scale = Vector2(2.9743047, 3.1766295)
+texture = ExtResource("2_5w6jf")
+
+[node name="Sprite2D20" type="Sprite2D" parent="Fundo" unique_id=1503767032]
+position = Vector2(200, 343)
+scale = Vector2(2.9743047, 3.1766295)
+texture = ExtResource("2_5w6jf")
+
+[node name="Arvore" type="Node2D" parent="." unique_id=724148864]
+position = Vector2(-25, 0)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Arvore" unique_id=1529902598]
+position = Vector2(1164.0002, 614)
+scale = Vector2(7.1875, 4.8333335)
+texture = ExtResource("3_0uw3r")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(128, 224, 32, 32)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Arvore" unique_id=1340116507]
+position = Vector2(938, 608)
+scale = Vector2(7.1875, 4.8333335)
+texture = ExtResource("3_0uw3r")
+region_enabled = true
+region_rect = Rect2(80, 224, 32, 30)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Arvore" unique_id=722848204]
+position = Vector2(712, 612.00006)
+scale = Vector2(7.1875, 4.8333335)
+texture = ExtResource("3_0uw3r")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(128, 224, 32, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Arvore" unique_id=1813173634]
+position = Vector2(152, 277)
+scale = Vector2(2.7, 4.125)
+texture = ExtResource("3_0uw3r")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(241, 96, 95, 48)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Arvore" unique_id=1850749353]
+position = Vector2(428.00003, 651)
+scale = Vector2(7.1875, 4.8333335)
+texture = ExtResource("3_0uw3r")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(176, 224, 48, 48)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Arvore" unique_id=250127741]
+position = Vector2(152, 91)
+scale = Vector2(2.7, 4.125)
+texture = ExtResource("3_0uw3r")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(241, 96, 95, 48)
+
+[node name="Sprite2D" type="Sprite2D" parent="Arvore" unique_id=1693505407]
+position = Vector2(149, 455.99997)
+scale = Vector2(2.7, 4.125)
+texture = ExtResource("3_0uw3r")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(241, 96, 95, 48)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Arvore" unique_id=797266234]
+position = Vector2(146.99998, 650)
+scale = Vector2(2.7, 4.125)
+texture = ExtResource("3_0uw3r")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(241, 96, 95, 48)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Arvore" unique_id=1241241842]
+position = Vector2(348, 259)
+scale = Vector2(3.28, 3.1724138)
+texture = ExtResource("4_m567b")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Arvore" unique_id=562949523]
+position = Vector2(-20, 388.00003)
+scale = Vector2(3.28, 3.1724138)
+texture = ExtResource("4_m567b")
+flip_h = true
+
+[node name="Ninhozinho" type="StaticBody2D" parent="." unique_id=1357870813]
 position = Vector2(1, -28)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Ninhozinho"]
+[node name="Sprite2D" type="Sprite2D" parent="Ninhozinho" unique_id=219965181]
 position = Vector2(588, 532)
 texture = ExtResource("3_ugupw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ninhozinho"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ninhozinho" unique_id=2061609253]
 position = Vector2(575.5, 559)
 shape = SubResource("RectangleShape2D_degj1")
 
-[node name="Spawn" type="Marker2D" parent="."]
+[node name="Spawn" type="Marker2D" parent="." unique_id=990622234]
 position = Vector2(581, 480)
 
-[node name="Paredes" type="Node2D" parent="."]
+[node name="Paredes" type="Node2D" parent="." unique_id=265464739]
 
-[node name="Chão" type="StaticBody2D" parent="Paredes"]
+[node name="Chão" type="StaticBody2D" parent="Paredes" unique_id=701239791]
 position = Vector2(577, 567)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chão"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chão" unique_id=133088926]
 position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="Parede Esquerda" type="StaticBody2D" parent="Paredes"]
+[node name="Parede Esquerda" type="StaticBody2D" parent="Paredes" unique_id=1447234137]
 position = Vector2(577, 567)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Parede Esquerda"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Parede Esquerda" unique_id=259681104]
 position = Vector2(-569, -363.5)
 shape = SubResource("RectangleShape2D_d14g2")
 
-[node name="Parede Direita" type="StaticBody2D" parent="Paredes"]
+[node name="Parede Direita" type="StaticBody2D" parent="Paredes" unique_id=1769353456]
 position = Vector2(594, 432)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Parede Direita"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Parede Direita" unique_id=1809809190]
 position = Vector2(552.5, -108.5)
 shape = SubResource("RectangleShape2D_hvend")
 
-[node name="SaidaNinho" type="Area2D" parent="."]
+[node name="SaidaNinho" type="Area2D" parent="." unique_id=981140441]
 position = Vector2(10, 479)
 script = ExtResource("4_4c20x")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SaidaNinho"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SaidaNinho" unique_id=565289774]
 position = Vector2(-2, 1.5)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1145559437]
 offset_left = 29.0
 offset_top = 397.0
 offset_right = 203.0
 offset_bottom = 420.0
 text = "Saia do ninho por aqui"
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("5_ugupw")]
+[node name="CharacterBody2D" parent="." unique_id=416057051 instance=ExtResource("5_ugupw")]
 position = Vector2(940.0001, 536)
 
-[node name="Ovo" type="CharacterBody2D" parent="."]
+[node name="Ovo" type="CharacterBody2D" parent="." unique_id=637584442]
 position = Vector2(576, 515)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Ovo"]
+[node name="Sprite2D" type="Sprite2D" parent="Ovo" unique_id=1085948842]
 texture = ExtResource("6_5w6jf")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="TutorialLayer" type="CanvasLayer" parent="."]
+layer = 5
 
-[node name="Painel" type="PanelContainer" parent="CanvasLayer"]
+[node name="TutorialControl" type="Control" parent="TutorialLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TutorialPanel" type="PanelContainer" parent="TutorialLayer/TutorialControl"]
+layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -618.0
-offset_top = 18.0
-offset_right = -18.0
-offset_bottom = 254.0
+offset_left = -376.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 310.0
 grow_horizontal = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_controles")
 
-[node name="Conteudo" type="VBoxContainer" parent="CanvasLayer/Painel"]
-custom_minimum_size = Vector2(600, 0)
+[node name="TutorialLista" type="VBoxContainer" parent="TutorialLayer/TutorialControl/TutorialPanel"]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 5
+theme_override_constants/separation = 3
 
-[node name="AvisoControles" type="Label" parent="CanvasLayer/Painel/Conteudo"]
-text = "Para mudar os controles, aperte Esc"
+[node name="TituloControles" type="Label" parent="TutorialLayer/TutorialControl/TutorialPanel/TutorialLista"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Controles"
+horizontal_alignment = 1
 
-[node name="Titulo" type="Label" parent="CanvasLayer/Painel/Conteudo"]
-text = "CONTROLES"
-
-[node name="Lista" type="VBoxContainer" parent="CanvasLayer/Painel/Conteudo"]
+[node name="ControlesLista" type="VBoxContainer" parent="TutorialLayer/TutorialControl/TutorialPanel/TutorialLista"]
+layout_mode = 2
 theme_override_constants/separation = 1
+
+[node name="AvisoControles" type="Label" parent="TutorialLayer/TutorialControl/TutorialPanel/TutorialLista"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Para mudar os controles, aperte Esc"
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="AvisoControlesTimer" type="Timer" parent="TutorialLayer"]
+process_mode = 3
+wait_time = 60.0
+one_shot = true

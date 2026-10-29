@@ -1,9 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://c67y5ffbdhke7"]
+[gd_scene format=3 uid="uid://c67y5ffbdhke7"]
 
 [ext_resource type="Texture2D" uid="uid://ddfrud1xvy0lb" path="res://sprites/fundos/forest.png" id="1_0gqr5"]
 [ext_resource type="Script" uid="uid://d4k01bmfbgye2" path="res://scripts/proxima_sala.gd" id="3_0gqr5"]
 [ext_resource type="Script" uid="uid://jodq81cqhepg" path="res://scripts/volta_ninho.gd" id="4_4bf1v"]
 [ext_resource type="PackedScene" uid="uid://ck6d4jxai41pl" path="res://cenas/inimigo.tscn" id="4_inimigo"]
+[ext_resource type="Texture2D" uid="uid://diiv7nyptb6s8" path="res://sprites/tileset-sliced.png" id="5_wiq2q"]
+[ext_resource type="Texture2D" uid="uid://d081vc3oo8eph" path="res://sprites/props-sliced/branch-04.png" id="6_ip332"]
+[ext_resource type="Texture2D" uid="uid://cfbg5384s6buv" path="res://sprites/Bee_Walk-removebg-preview.png" id="7_ip332"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(20, 361)
@@ -12,7 +15,7 @@ size = Vector2(20, 361)
 size = Vector2(20, 396)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
-size = Vector2(498, 20)
+size = Vector2(621, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
 size = Vector2(1152, 14)
@@ -38,118 +41,239 @@ size = Vector2(20, 202)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0634g"]
 size = Vector2(20, 112)
 
-[node name="Area1" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0634g"]
+atlas = ExtResource("7_ip332")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnsow"]
+atlas = ExtResource("7_ip332")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqptl"]
+atlas = ExtResource("7_ip332")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wk51"]
+atlas = ExtResource("7_ip332")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0634g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnsow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqptl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wk51")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area1" type="Node2D" unique_id=1862796449]
 metadata/limite_queda = 700.0
 
-[node name="Fundo" type="Node2D" parent="."]
+[node name="Fundo" type="Node2D" parent="." unique_id=1700322951]
 
-[node name="Sprite2D" type="Sprite2D" parent="Fundo"]
+[node name="Sprite2D" type="Sprite2D" parent="Fundo" unique_id=1166991106]
 texture_filter = 1
 position = Vector2(576.00006, 323.99997)
 scale = Vector2(3.1304348, 2.7)
 texture = ExtResource("1_0gqr5")
 
-[node name="Paredes" type="Node2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="Fundo" unique_id=1427078177]
+texture_filter = 1
+position = Vector2(491, 624)
+scale = Vector2(3.1304348, 2.7)
+texture = ExtResource("1_0gqr5")
+region_enabled = true
+region_rect = Rect2(291, 197, 77, 43)
 
-[node name="Esquerda" type="StaticBody2D" parent="Paredes"]
+[node name="Paredes" type="Node2D" parent="." unique_id=1814310649]
+
+[node name="Esquerda" type="StaticBody2D" parent="Paredes" unique_id=260948779]
 position = Vector2(10, 223)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Esquerda"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Esquerda" unique_id=439045560]
 position = Vector2(0, -27.5)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="Direita" type="StaticBody2D" parent="Paredes"]
+[node name="Direita" type="StaticBody2D" parent="Paredes" unique_id=1090347224]
 position = Vector2(1142, 265)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Direita"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Direita" unique_id=976114991]
 position = Vector2(0, -53)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="Chao" type="StaticBody2D" parent="Paredes"]
+[node name="Chao" type="StaticBody2D" parent="Paredes" unique_id=804092542]
 position = Vector2(604, 577)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao"]
-position = Vector2(-354, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao" unique_id=1968835932]
+position = Vector2(-292.5, 0)
 shape = SubResource("RectangleShape2D_57qmd")
 
-[node name="Teto" type="StaticBody2D" parent="Paredes"]
+[node name="Teto" type="StaticBody2D" parent="Paredes" unique_id=123581468]
 position = Vector2(563, 10)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Teto"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Teto" unique_id=2032472027]
 position = Vector2(13, -3)
 shape = SubResource("RectangleShape2D_d0u6y")
 
-[node name="Chao2" type="StaticBody2D" parent="Paredes"]
+[node name="Chao2" type="StaticBody2D" parent="Paredes" unique_id=1554201347]
 position = Vector2(1010, 532)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao2" unique_id=1680478520]
 position = Vector2(6.5, 0)
 shape = SubResource("RectangleShape2D_0gqr5")
 
-[node name="Chao3" type="StaticBody2D" parent="Paredes"]
+[node name="Chao3" type="StaticBody2D" parent="Paredes" unique_id=1784458653]
 position = Vector2(807, 441)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao3" unique_id=1074804322]
 position = Vector2(-6.5, 0)
 shape = SubResource("RectangleShape2D_4bf1v")
 
-[node name="Chao4" type="StaticBody2D" parent="Paredes"]
+[node name="Chao4" type="StaticBody2D" parent="Paredes" unique_id=418173159]
 position = Vector2(653, 530)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Chao4" unique_id=1278335286]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_u6w17")
 
-[node name="Paredezinha1" type="StaticBody2D" parent="Paredes"]
+[node name="Paredezinha1" type="StaticBody2D" parent="Paredes" unique_id=1939745059]
 position = Vector2(891, 492)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Paredezinha1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Paredezinha1" unique_id=1277517733]
 position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_wiq2q")
 
-[node name="Paredezinha2" type="StaticBody2D" parent="Paredes"]
+[node name="Paredezinha2" type="StaticBody2D" parent="Paredes" unique_id=639242477]
 position = Vector2(710, 489)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Paredezinha2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Paredezinha2" unique_id=1584981232]
 position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_ip332")
 
-[node name="Spawn" type="Marker2D" parent="."]
+[node name="Spawn" type="Marker2D" parent="." unique_id=1305573153]
 position = Vector2(1068, 527)
 
-[node name="Inimigo" parent="." instance=ExtResource("4_inimigo")]
+[node name="Inimigo" parent="." unique_id=1834801356 instance=ExtResource("4_inimigo")]
 position = Vector2(107, 520)
 
-[node name="ProximaSala" type="Area2D" parent="."]
+[node name="ProximaSala" type="Area2D" parent="." unique_id=1374346386]
 position = Vector2(11, 473)
 script = ExtResource("3_0gqr5")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ProximaSala"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProximaSala" unique_id=2007949000]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_3gngh")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=2071694238]
 offset_left = 55.0
 offset_top = 381.0
 offset_right = 285.0
 offset_bottom = 404.0
-text = "Avance para a proxima sala"
+text = "Avançe para o próximo local"
 
-[node name="VoltaNinho" type="Area2D" parent="."]
-position = Vector2(1142, 467)
+[node name="VoltaNinho" type="Area2D" parent="." unique_id=192067525]
+position = Vector2(1140, 467)
 script = ExtResource("4_4bf1v")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VoltaNinho"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VoltaNinho" unique_id=210582320]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_0634g")
+
+[node name="Arvore" type="Node2D" parent="." unique_id=1004045971]
+position = Vector2(1025, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Arvore" unique_id=571257112]
+position = Vector2(2.9999924, 287.99997)
+scale = Vector2(1.1394737, 3.8541665)
+texture = ExtResource("5_wiq2q")
+region_enabled = true
+region_rect = Rect2(241, 96, 95, 48)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Arvore" unique_id=1833345065]
+position = Vector2(1.9375082, 98.25)
+scale = Vector2(1.201316, 4.34375)
+texture = ExtResource("5_wiq2q")
+region_enabled = true
+region_rect = Rect2(241, 96, 95, 48)
+
+[node name="Sprite2D" type="Sprite2D" parent="Arvore" unique_id=804573617]
+position = Vector2(3.9999924, 443.00003)
+scale = Vector2(1.1394737, 4.041666)
+texture = ExtResource("5_wiq2q")
+region_enabled = true
+region_rect = Rect2(241, 96, 95, 48)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Arvore" unique_id=91577416]
+position = Vector2(-119.99999, 114)
+scale = Vector2(1.2708333, 0.9830096)
+texture = ExtResource("6_ip332")
+
+[node name="Abelhas" type="Node2D" parent="." unique_id=717831275]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Abelhas" unique_id=2092368616]
+position = Vector2(553, 150)
+scale = Vector2(1.4702213, 1.0625165)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame_progress = 0.116035506
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Abelhas" unique_id=1751732659]
+position = Vector2(579.00006, 122)
+scale = Vector2(1.4702213, 1.0625165)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame_progress = 0.18749537
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Abelhas" unique_id=1842150054]
+position = Vector2(544.00006, 121.00001)
+scale = Vector2(1.4702213, 1.0625165)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame_progress = 0.18749537
+flip_h = true
+
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Abelhas" unique_id=633966515]
+position = Vector2(585, 147)
+scale = Vector2(1.4702213, 1.0625165)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame_progress = 0.18749537
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Abelhas" unique_id=1213529103]
+position = Vector2(513, 125)
+scale = Vector2(1.4702213, 1.0625165)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame_progress = 0.18749537
+flip_h = true
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Abelhas" unique_id=1962991312]
+position = Vector2(516, 147)
+scale = Vector2(1.4702213, 1.0625165)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame_progress = 0.18749537
+flip_h = true

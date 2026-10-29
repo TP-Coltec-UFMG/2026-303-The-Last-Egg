@@ -9,7 +9,7 @@ func _ready():
 	$MarginContainer/VBoxContainer/Volume_Musica_Barra.value = ConfigFileHandler.volume_musica
 	$MarginContainer/VBoxContainer/Volume_Efeitos_Barra.value = ConfigFileHandler.volume_efeitos
 	$MarginContainer/VBoxContainer/Daltonismo_Config.select(ConfigFileHandler.modo_daltonismo)
-	$MarginContainer/VBoxContainer/AltoContraste_Linha/AltoContraste_CheckBox.button_pressed = ConfigFileHandler.modo_altocontraste
+	_atualizar_botoes_alto_contraste()
 
 	if modo_pausa:
 		$Voltar_TelaInicial.text = "Continuar"
@@ -78,7 +78,19 @@ func _on_daltonismo_config_item_selected(indice: int):
 	filtroglobal.aplicar_acessibilidade()
 
 
-func _on_alto_contraste_check_box_toggled(toggled_on: bool):
-	ConfigFileHandler.modo_altocontraste = toggled_on
+func _on_alto_contraste_sim_pressed() -> void:
+	_definir_alto_contraste(true)
+
+func _on_alto_contraste_nao_pressed() -> void:
+	_definir_alto_contraste(false)
+
+func _definir_alto_contraste(ativado: bool) -> void:
+	ConfigFileHandler.modo_altocontraste = ativado
 	ConfigFileHandler.salvar_config()
 	filtroglobal.aplicar_acessibilidade()
+	_atualizar_botoes_alto_contraste()
+
+func _atualizar_botoes_alto_contraste() -> void:
+	var ativado: bool = ConfigFileHandler.modo_altocontraste
+	$MarginContainer/VBoxContainer/AltoContraste_Linha/AltoContraste_Sim.button_pressed = ativado
+	$MarginContainer/VBoxContainer/AltoContraste_Linha/AltoContraste_Nao.button_pressed = not ativado

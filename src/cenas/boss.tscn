@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://dmjr40sxcn4ve"]
+
+[ext_resource type="Script" uid="uid://rcdrkgsphogb" path="res://scripts/boss.gd" id="1_cpigd"]
+[ext_resource type="Texture2D" uid="uid://vfmbbbs26wic" path="res://sprites/image (56) (1).png" id="2_cpigd"]
+[ext_resource type="Texture2D" uid="uid://bttdoywto57i4" path="res://sprites/enemy-death/enemy-death-1.png" id="3_i0wsl"]
+[ext_resource type="Texture2D" uid="uid://dfywen0ywkvit" path="res://sprites/enemy-death/enemy-death-2.png" id="4_7c2v4"]
+[ext_resource type="Texture2D" uid="uid://c3uywgvgu20hi" path="res://sprites/enemy-death/enemy-death-3.png" id="5_4grv1"]
+[ext_resource type="Texture2D" uid="uid://dqo4g0u8wy7d8" path="res://sprites/enemy-death/enemy-death-4.png" id="6_5o4le"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybsne"]
+atlas = ExtResource("2_cpigd")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0wsl"]
+atlas = ExtResource("2_cpigd")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c2v4"]
+atlas = ExtResource("2_cpigd")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4grv1"]
+atlas = ExtResource("2_cpigd")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybsne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0wsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7c2v4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4grv1")
+}],
+"loop": 1,
+"name": &"andar",
+"speed": 3.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"atacar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_i0wsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7c2v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4grv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5o4le")
+}],
+"loop": 0,
+"name": &"morte",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inimigo"]
+size = Vector2(38, 38)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_inimigo"]
+radius = 36.013885
+
+[node name="Inimigo" type="CharacterBody2D" unique_id=1796498497 node_paths=PackedStringArray("HUD")]
+texture_filter = 1
+script = ExtResource("1_cpigd")
+HUD = NodePath("HUD")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1939526930]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"andar"
+frame_progress = 0.2606638
+speed_scale = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1769604301]
+scale = Vector2(1.401297, 1.401297)
+shape = SubResource("RectangleShape2D_inimigo")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1687424653]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=684202984]
+scale = Vector2(1.3270376, 1.3270376)
+shape = SubResource("CircleShape2D_inimigo")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1047588887]
+layer = 10
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD" unique_id=1408117843]
+offset_left = 497.0
+offset_top = 274.0
+offset_right = 537.0
+offset_bottom = 314.0
+alignment = 1
+
+[node name="MensagemVitoria" type="Label" parent="HUD/VBoxContainer" unique_id=2012594376]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.86, 0.72, 1)
+theme_override_colors/font_shadow_color = Color(0.12, 0.06, 0.04, 0.9)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 34
+text = "Você venceu!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotaoMenu" type="Button" parent="HUD/VBoxContainer" unique_id=1143435622]
+layout_mode = 2
+text = "Voltar para o Menu"

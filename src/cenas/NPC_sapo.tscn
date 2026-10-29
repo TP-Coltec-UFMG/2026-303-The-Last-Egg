@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://b3aaglqdwldlk"]
+
+[ext_resource type="Script" uid="uid://ju3qwiw0u8x7" path="res://scripts/npc_sapo.gd" id="1_rphsq"]
+[ext_resource type="Texture2D" uid="uid://cnop5mr3rthet" path="res://sprites/Firefly_RemoveBackground.png" id="2_rphsq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dn87"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nlg1"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itd2l"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8raql"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgapd"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv5nk"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pg54"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12t2s"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sx8y3"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nj8y"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7df5g"]
+atlas = ExtResource("2_rphsq")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dn87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nlg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itd2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8raql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgapd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv5nk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pg54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12t2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sx8y3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nj8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7df5g")
+}],
+"loop": 1,
+"name": &"parado",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktgr7"]
+size = Vector2(242.77502, 176.70625)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jnjht"]
+radius = 260.12305
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=290666181]
+position = Vector2(3.9999998, -7.9999995)
+scale = Vector2(0.2141901, 0.2141901)
+script = ExtResource("1_rphsq")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1892148336]
+texture_filter = 1
+position = Vector2(-32.68125, -140.06248)
+scale = Vector2(18.642763, 17.47567)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"parado"
+autoplay = "parado"
+frame_progress = 0.8393955
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1929660483]
+position = Vector2(-14.006242, -0.3531296)
+scale = Vector2(1.617524, 1.617524)
+shape = SubResource("RectangleShape2D_ktgr7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=537419653]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=525098720]
+scale = Vector2(2.3953886, 2.3953886)
+shape = SubResource("CircleShape2D_jnjht")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1662857736]
+
+[node name="PanelDialogo" type="PanelContainer" parent="CanvasLayer" unique_id=138468564]
+offset_left = 165.0
+offset_top = 312.0
+offset_right = 565.0
+offset_bottom = 352.0
+metadata/_edit_group_ = true
+
+[node name="LabelDialogo" type="Label" parent="CanvasLayer/PanelDialogo" unique_id=264770373]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+autowrap_mode = 2

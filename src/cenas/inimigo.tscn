@@ -1,7 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://ck6d4jxai41pl"]
+[gd_scene format=3 uid="uid://ck6d4jxai41pl"]
 
 [ext_resource type="Script" uid="uid://n2tjhavk7y31" path="res://scripts/inimigo.gd" id="1_inimigo"]
 [ext_resource type="Texture2D" uid="uid://b67rpf1al0rth" path="res://sprites/inimigo_tucano/image (56).png" id="2_l8wry"]
+[ext_resource type="Texture2D" uid="uid://bttdoywto57i4" path="res://sprites/enemy-death/enemy-death-1.png" id="3_8ehji"]
+[ext_resource type="Texture2D" uid="uid://dfywen0ywkvit" path="res://sprites/enemy-death/enemy-death-2.png" id="4_h71cv"]
+[ext_resource type="Texture2D" uid="uid://c3uywgvgu20hi" path="res://sprites/enemy-death/enemy-death-3.png" id="5_u1rxv"]
+[ext_resource type="Texture2D" uid="uid://dqo4g0u8wy7d8" path="res://sprites/enemy-death/enemy-death-4.png" id="6_hsqkj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2cae"]
 atlas = ExtResource("2_l8wry")
@@ -41,13 +45,30 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h71cv")
 }],
-"loop": true,
+"loop": 1,
 "name": &"andar",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"atacar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8ehji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h71cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u1rxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hsqkj")
+}],
+"loop": 0,
+"name": &"morte",
 "speed": 5.0
 }]
 
@@ -57,23 +78,23 @@ size = Vector2(38, 38)
 [sub_resource type="CircleShape2D" id="CircleShape2D_inimigo"]
 radius = 36.013885
 
-[node name="Inimigo" type="CharacterBody2D"]
+[node name="Inimigo" type="CharacterBody2D" unique_id=1796498497]
 texture_filter = 1
 script = ExtResource("1_inimigo")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1939526930]
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"andar"
+animation = &"morte"
 speed_scale = 3.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1769604301]
 scale = Vector2(1.401297, 1.401297)
 shape = SubResource("RectangleShape2D_inimigo")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." unique_id=1687424653]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=684202984]
 scale = Vector2(1.3270376, 1.3270376)
 shape = SubResource("CircleShape2D_inimigo")

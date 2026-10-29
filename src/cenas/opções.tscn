@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dyqc4jj8flu0u" path="res://scripts/opções.gd" id="1_tdy4x"]
 [ext_resource type="FontFile" uid="uid://d0jncce8bh8if" path="res://fonte/GrapeSoda.ttf" id="2_4fjk0"]
-[ext_resource type="Texture2D" uid="uid://d3e6lhel3rrym" path="res://sprites/sprites_ovo/tile036.png" id="3_tdy4x"]
 
 [node name="opções" type="Control" unique_id=411226169]
 layout_mode = 3
@@ -80,15 +79,22 @@ popup/item_2/id = 2
 popup/item_3/text = "Tritanopia"
 popup/item_3/id = 3
 
-[node name="AltoContraste_Linha" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="AltoContraste_Linha" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1873923355]
 layout_mode = 2
 
 [node name="AltoContraste_Texto" type="Label" parent="MarginContainer/VBoxContainer/AltoContraste_Linha" unique_id=2034781529]
 layout_mode = 2
 text = "Alto Contraste:"
 
-[node name="AltoContraste_CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/AltoContraste_Linha" unique_id=1605004884]
+[node name="AltoContraste_Sim" type="Button" parent="MarginContainer/VBoxContainer/AltoContraste_Linha" unique_id=810139783]
 layout_mode = 2
+toggle_mode = true
+text = "Sim"
+
+[node name="AltoContraste_Nao" type="Button" parent="MarginContainer/VBoxContainer/AltoContraste_Linha" unique_id=2143892943]
+layout_mode = 2
+toggle_mode = true
+text = "Não"
 
 [node name="Voltar_TelaInicial" type="Button" parent="." unique_id=4379397]
 layout_mode = 0
@@ -115,16 +121,12 @@ offset_right = 851.0
 offset_bottom = 521.0
 text = "Controles"
 
-[node name="Tile036" type="Sprite2D" parent="." unique_id=2134298878]
-position = Vector2(1014, 544)
-scale = Vector2(1.0286459, 1.2259616)
-texture = ExtResource("3_tdy4x")
-
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Geral_Barra" to="." method="_on_volume_geral_barra_value_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Musica_Barra" to="." method="_on_volume_musica_barra_value_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Efeitos_Barra" to="." method="_on_volume_efeitos_barra_value_changed"]
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/Daltonismo_Config" to="." method="_on_daltonismo_config_item_selected"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/AltoContraste_Linha/AltoContraste_CheckBox" to="." method="_on_alto_contraste_check_box_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/AltoContraste_Linha/AltoContraste_Sim" to="." method="_on_alto_contraste_sim_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/AltoContraste_Linha/AltoContraste_Nao" to="." method="_on_alto_contraste_nao_pressed"]
 [connection signal="pressed" from="Voltar_TelaInicial" to="." method="_on_voltar_tela_inicial_pressed"]
 [connection signal="pressed" from="Voltar_Abertura" to="." method="_on_voltar_abertura_pressed"]
 [connection signal="pressed" from="Acessibilidade_Botao" to="." method="_on_acessibilidade_botao_pressed"]
