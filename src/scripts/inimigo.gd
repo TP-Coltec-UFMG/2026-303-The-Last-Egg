@@ -136,6 +136,7 @@ func dar_dano(dano: int) -> void:
 	$AnimatedSprite2D.modulate = Color(1.0, 0.35, 0.35)
 
 	if vida <= 0:
+		GameManager.tocar_som_morte_inimigo(global_position)
 		$CollisionShape2D.disabled = true
 		set_physics_process(false)
 		$AnimatedSprite2D.play("morte")

@@ -35,7 +35,7 @@ scale = Vector2(4.938743, 4.3180766)
 texture = ExtResource("2_5w6jf")
 
 [node name="Sprite2D17" type="Sprite2D" parent="Fundo" unique_id=207636195]
-position = Vector2(1131.9999, 222)
+position = Vector2(1129, 296)
 scale = Vector2(3.546357, 3.7980583)
 texture = ExtResource("2_5w6jf")
 
@@ -271,10 +271,10 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Ovo" unique_id=1085948842]
 texture = ExtResource("6_5w6jf")
 
-[node name="TutorialLayer" type="CanvasLayer" parent="."]
+[node name="TutorialLayer" type="CanvasLayer" parent="." unique_id=420828209]
 layer = 5
 
-[node name="TutorialControl" type="Control" parent="TutorialLayer"]
+[node name="TutorialControl" type="Control" parent="TutorialLayer" unique_id=804114101]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -282,7 +282,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TutorialPanel" type="PanelContainer" parent="TutorialLayer/TutorialControl"]
+[node name="TutorialPanel" type="PanelContainer" parent="TutorialLayer/TutorialControl" unique_id=396127803]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -293,28 +293,33 @@ offset_right = -16.0
 offset_bottom = 310.0
 grow_horizontal = 0
 
-[node name="TutorialLista" type="VBoxContainer" parent="TutorialLayer/TutorialControl/TutorialPanel"]
+[node name="TutorialLista" type="VBoxContainer" parent="TutorialLayer/TutorialControl/TutorialPanel" unique_id=1275932631]
 layout_mode = 2
 theme_override_constants/separation = 3
 
-[node name="TituloControles" type="Label" parent="TutorialLayer/TutorialControl/TutorialPanel/TutorialLista"]
+[node name="TituloControles" type="Label" parent="TutorialLayer/TutorialControl/TutorialPanel/TutorialLista" unique_id=515337347]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Controles"
 horizontal_alignment = 1
 
-[node name="ControlesLista" type="VBoxContainer" parent="TutorialLayer/TutorialControl/TutorialPanel/TutorialLista"]
+[node name="ControlesLista" type="VBoxContainer" parent="TutorialLayer/TutorialControl/TutorialPanel/TutorialLista" unique_id=581992603]
 layout_mode = 2
 theme_override_constants/separation = 1
 
-[node name="AvisoControles" type="Label" parent="TutorialLayer/TutorialControl/TutorialPanel/TutorialLista"]
+[node name="AvisoControles" type="Label" parent="TutorialLayer/TutorialControl/TutorialPanel/TutorialLista" unique_id=1272402974]
 layout_mode = 2
 theme_override_font_sizes/font_size = 14
 text = "Para mudar os controles, aperte Esc"
-autowrap_mode = 2
 horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="AvisoControlesTimer" type="Timer" parent="TutorialLayer"]
+[node name="AvisoControlesTimer" type="Timer" parent="TutorialLayer" unique_id=2042590615]
 process_mode = 3
 wait_time = 60.0
 one_shot = true
+
+[node name="Sprite2D20" type="Sprite2D" parent="." unique_id=230484488]
+position = Vector2(1176, -4.9999924)
+scale = Vector2(2.9743047, 2.5978384)
+texture = ExtResource("2_5w6jf")

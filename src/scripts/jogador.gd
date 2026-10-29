@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var area_ataque : Area2D = $AreaAtaque
 @onready var ovos_vida: Array[Sprite2D] = [$HUD/Ovo1, $HUD/Ovo2, $HUD/Ovo3]
 @onready var mensagem_morte: Label = $HUD/MensagemMorte
+@onready var som_ataque: AudioStreamPlayer2D = $SomAtaque
 
 @export var vida: int = 3
 
@@ -64,6 +65,7 @@ func _input(event: InputEvent) -> void:
 		
 func atacar() -> void:
 	$AnimatedSprite2D.play("atacar")
+	som_ataque.play()
 	atacando = true
 	mostrar_alcance_ataque(area_ataque, Color(0.55, 0.9, 1.0, 0.9))
 	

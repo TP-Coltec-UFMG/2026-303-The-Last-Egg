@@ -136,6 +136,7 @@ func dar_dano(dano: int) -> void:
 	$AnimatedSprite2D.modulate = Color(1.0, 0.35, 0.35)
 
 	if vida <= 0:
+		GameManager.tocar_som_morte_inimigo(global_position)
 		if is_instance_valid(jogador) and jogador.has_method("dar_dano"):
 			jogador.vida = min(jogador.vida + 1, 3)
 			jogador.atualizar_hud()

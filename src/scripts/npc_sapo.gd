@@ -22,15 +22,10 @@ var ja_conversou: bool = false
 
 func _ready(): 
 	$AnimatedSprite2D.play("parado")
-	sprite.frame_changed.connect(_on_sprite_frame_changed)
 	alvo_atual = ponto_b 
 	canvas_dialogo.visible = false 
 	area_deteccao.body_entered.connect(_on_area_deteccao_body_entered) 
 
-func _on_sprite_frame_changed() -> void:
-	if estado == Estado.DIALOGANDO and sprite.frame == 3:
-		grito_emanuel.play()
-	
 func _physics_process(_delta: float) -> void: 
 	match estado: 
 		#Estado.PATRULHANDO: 

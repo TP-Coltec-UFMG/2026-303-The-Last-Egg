@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://diwvrbanm5h42"]
+[gd_scene format=3 uid="uid://diwvrbanm5h42"]
 
 [ext_resource type="Script" uid="uid://cu0fy64nfb7a1" path="res://scripts/jogador.gd" id="1_06a7y"]
 [ext_resource type="Texture2D" uid="uid://dols32k7yt1b5" path="res://sprites/sprites_Saaira(incompleto)/prota_andando.png" id="2_ufweb"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dcs7rb35u7vsd" path="res://sprites/sprites_Saaira(incompleto)/prota_atacandoeandando-sheet.png" id="4_6j1qs"]
 [ext_resource type="Texture2D" uid="uid://ydwyi8i8vvkv" path="res://sprites/sprites_Saaira(incompleto)/prota_idle-Sheet.png" id="5_gmhka"]
 [ext_resource type="Texture2D" uid="uid://6a66f12x488" path="res://sprites/hud/Vida_ovo.png" id="6_vida_ovo"]
+[ext_resource type="AudioStream" uid="uid://bnr7ydpw140j" path="res://SFX/som_ataque.mp3" id="7_som_ataque"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_71kwk"]
 atlas = ExtResource("2_ufweb")
@@ -112,7 +113,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rge55")
 }],
-"loop": true,
+"loop": 1,
 "name": &"andar",
 "speed": 10.0
 }, {
@@ -129,7 +130,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7cnop")
 }],
-"loop": false,
+"loop": 0,
 "name": &"atacar",
 "speed": 10.0
 }, {
@@ -152,7 +153,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t6o5y")
 }],
-"loop": false,
+"loop": 0,
 "name": &"atacar_correndo",
 "speed": 10.0
 }, {
@@ -172,7 +173,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jvbpx")
 }],
-"loop": true,
+"loop": 1,
 "name": &"parado",
 "speed": 8.0
 }]
@@ -182,33 +183,37 @@ size = Vector2(24.564621, 22.564621)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_06a7y"]
 
-[node name="Jogador" type="CharacterBody2D"]
+[node name="Jogador" type="CharacterBody2D" unique_id=1731082858]
 scale = Vector2(0.56867933, 0.56867933)
 script = ExtResource("1_06a7y")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2132619002]
 texture_filter = 1
 position = Vector2(1.396069, -1.396069)
 scale = Vector2(1.2145754, 1.2072098)
 sprite_frames = SubResource("SpriteFrames_hvend")
 animation = &"parado"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="SomAtaque" type="AudioStreamPlayer2D" parent="." unique_id=2146826341]
+stream = ExtResource("7_som_ataque")
+bus = &"Efeitos"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=224504341]
 position = Vector2(0.28231, -1.28231)
 scale = Vector2(3.0296245, 3.0296245)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="AreaAtaque" type="Area2D" parent="."]
+[node name="AreaAtaque" type="Area2D" parent="." unique_id=1024793062]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque" unique_id=163550621]
 scale = Vector2(9.332556, 7.8831577)
 shape = SubResource("CircleShape2D_06a7y")
 
-[node name="HUD" type="CanvasLayer" parent="."]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1318476788]
 layer = 10
 
-[node name="VidaLabel" type="Label" parent="HUD"]
+[node name="VidaLabel" type="Label" parent="HUD" unique_id=1692173982]
 offset_left = 11.0
 offset_top = 22.000002
 offset_right = 59.0
@@ -221,22 +226,22 @@ theme_override_constants/shadow_offset_y = 2
 theme_override_font_sizes/font_size = 20
 text = "Vida:"
 
-[node name="Ovo1" type="Sprite2D" parent="HUD"]
+[node name="Ovo1" type="Sprite2D" parent="HUD" unique_id=1005798498]
 texture_filter = 1
 position = Vector2(68, 36)
 texture = ExtResource("6_vida_ovo")
 
-[node name="Ovo2" type="Sprite2D" parent="HUD"]
+[node name="Ovo2" type="Sprite2D" parent="HUD" unique_id=428455920]
 texture_filter = 1
 position = Vector2(104, 36)
 texture = ExtResource("6_vida_ovo")
 
-[node name="Ovo3" type="Sprite2D" parent="HUD"]
+[node name="Ovo3" type="Sprite2D" parent="HUD" unique_id=1517332033]
 texture_filter = 1
 position = Vector2(140, 36)
 texture = ExtResource("6_vida_ovo")
 
-[node name="MensagemMorte" type="Label" parent="HUD"]
+[node name="MensagemMorte" type="Label" parent="HUD" unique_id=1019609851]
 visible = false
 offset_left = 200.0
 offset_top = 250.0

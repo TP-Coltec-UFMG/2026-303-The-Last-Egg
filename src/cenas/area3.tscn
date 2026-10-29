@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://ddfrud1xvy0lb" path="res://sprites/fundos/forest.png" id="1_ys65q"]
 [ext_resource type="PackedScene" uid="uid://ck6d4jxai41pl" path="res://cenas/inimigo.tscn" id="2_fwxth"]
-[ext_resource type="Script" uid="uid://d4k01bmfbgye2" path="res://scripts/proxima_sala.gd" id="3_ys65q"]
 [ext_resource type="Script" uid="uid://caof1a8j7w15e" path="res://scripts/volta_ninho_boss.gd" id="4_fwxth"]
 [ext_resource type="Texture2D" uid="uid://diiv7nyptb6s8" path="res://sprites/tileset-sliced.png" id="5_g822n"]
 [ext_resource type="Texture2D" uid="uid://d081vc3oo8eph" path="res://sprites/props-sliced/branch-04.png" id="6_4hlky"]
@@ -34,9 +33,6 @@ size = Vector2(20, 73)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ip332"]
 size = Vector2(20, 69)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
-size = Vector2(20, 202)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0634g"]
 size = Vector2(20, 112)
@@ -99,7 +95,7 @@ region_rect = Rect2(291, 197, 77, 43)
 [node name="Paredes" type="Node2D" parent="." unique_id=1814310649]
 
 [node name="Esquerda" type="StaticBody2D" parent="Paredes" unique_id=260948779]
-position = Vector2(10, 223)
+position = Vector2(9, 412)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/Esquerda" unique_id=439045560]
@@ -174,16 +170,7 @@ shape = SubResource("RectangleShape2D_ip332")
 position = Vector2(49, 501)
 
 [node name="Inimigo" parent="." unique_id=1834801356 instance=ExtResource("2_fwxth")]
-position = Vector2(107, 520)
-
-[node name="ProximaSala" type="Area2D" parent="." unique_id=1374346386]
-position = Vector2(11, 473)
-script = ExtResource("3_ys65q")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ProximaSala" unique_id=2007949000]
-position = Vector2(0, -2)
-shape = SubResource("RectangleShape2D_3gngh")
+position = Vector2(344, 519)
 
 [node name="Label" type="Label" parent="." unique_id=2071694238]
 offset_left = 55.0
@@ -278,4 +265,4 @@ frame_progress = 0.18749537
 flip_h = true
 
 [node name="Inimigo2" parent="." unique_id=1796498497 instance=ExtResource("2_fwxth")]
-position = Vector2(351, 526)
+position = Vector2(528, 523)
